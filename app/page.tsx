@@ -1,49 +1,123 @@
-import Image from "next/image";
-import Link from "next/link"; 
+"use client";
+
+import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  }, []);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            Jairo's Portfolio
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen px-10 py-20">
+      {/* 1. INTRO */}
+      <section className="fade-in min-h-screen flex flex-col justify-center border-b border-slate-700">
+        <div className="max-w-2xl rounded-3xl bg-slate-800/70 p-10 shadow-xl">
+          <h1 className="text-5xl font-bold text-slate-50">Hi, I'm Jairo</h1>
+          <p className="mt-6 text-xl leading-8 text-slate-300">
+            A UX-focused designer interested in building intuitive,
+            human-centered tools.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </section>
+
+      {/* 2. PROJECTS */}
+      <section className="fade-in min-h-screen flex flex-col justify-center border-b border-slate-700">
+        <div className="max-w-3xl rounded-3xl bg-slate-800/70 p-10 shadow-xl">
+          <h2 className="text-4xl font-semibold text-slate-50">Projects</h2>
+
+          <div className="mt-8 space-y-6">
+            <div className="rounded-2xl border border-slate-600 bg-slate-900/60 p-6">
+              <h3 className="text-xl font-medium text-slate-50">
+                Hearing Aid App Redesign
+              </h3>
+              <p className="mt-2 text-slate-300">
+                Improving quick access and usability for hearing aid users.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-600 bg-slate-900/60 p-6">
+              <h3 className="text-xl font-medium text-slate-50">
+                Smart Home Dashboard
+              </h3>
+              <p className="mt-2 text-slate-300">
+                Redesigning device control with a room-based system.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-600 bg-slate-900/60 p-6">
+              <h3 className="text-xl font-medium text-slate-50">
+                JIT Website Audit
+              </h3>
+              <p className="mt-2 text-slate-300">
+                Helping users find resources more efficiently.
+              </p>
+            </div>
+          </div>
+
           <Link
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
+            className="mt-8 inline-block rounded-full border border-sky-400 px-6 py-3 text-sky-300 transition hover:bg-sky-400 hover:text-slate-950"
             href="/projects"
           >
-            View Projects
-          </Link> 
+            View more →
+          </Link>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* 3. ABOUT */}
+      <section className="fade-in min-h-screen flex flex-col justify-center border-b border-slate-700">
+        <div className="max-w-2xl rounded-3xl bg-slate-800/70 p-10 shadow-xl">
+          <h2 className="text-4xl font-semibold text-slate-50">About Me</h2>
+          <p className="mt-6 text-lg leading-8 text-slate-300">
+            I'm a student at UC San Diego focused on UX design and development.
+            I enjoy solving real-world problems through simple, thoughtful
+            interfaces.
+          </p>
+        </div>
+      </section>
+
+      {/* 4. CONTACT */}
+      <section className="fade-in min-h-screen flex flex-col justify-center">
+        <div className="max-w-2xl rounded-3xl bg-slate-800/70 p-10 shadow-xl">
+          <p className="text-sm uppercase tracking-widest text-sky-300">
+            Like what you see?
+          </p>
+          <h2 className="mt-3 text-5xl font-bold text-slate-50">
+            Let's Connect
+          </h2>
+
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a
+              className="rounded-full border border-slate-500 px-6 py-3 text-center text-slate-100 transition hover:bg-sky-400 hover:text-slate-950"
+              href="#"
+            >
+              Resume
+            </a>
+            <a
+              className="rounded-full border border-slate-500 px-6 py-3 text-center text-slate-100 transition hover:bg-sky-400 hover:text-slate-950"
+              href="#"
+            >
+              LinkedIn
+            </a>
+            <a
+              className="rounded-full border border-slate-500 px-6 py-3 text-center text-slate-100 transition hover:bg-sky-400 hover:text-slate-950"
+              href="mailto:youremail@email.com"
+            >
+              Email
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

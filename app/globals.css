@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --accent: #38bdf8;
+  --muted: #94a3b8;
 }
 
 @theme inline {
@@ -12,15 +14,21 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fade-in scroll animation (stronger + smoother) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease, transform 1s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
