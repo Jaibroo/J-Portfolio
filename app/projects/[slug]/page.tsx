@@ -6,15 +6,29 @@ const projectData = {
     description:
       "A UX project focused on helping hearing aid users quickly adjust settings in changing sound environments.",
   },
+
   "smart-home-dashboard": {
     title: "Smart Home Dashboard Redesign",
     description:
       "A redesign that organizes smart home devices by room so users can find and control devices faster.",
   },
+
   "jit-website-audit": {
     title: "JIT Website Audit",
     description:
       "A website audit focused on helping young adults find resources more easily.",
+  },
+
+  "multi-scale-hearing-interface": {
+    title: "Multi-Scale Hearing Interface",
+    description:
+      "A project exploring how hearing aid support changes across inch, foot, and yard-scale interfaces.",
+  },
+
+  "portfolio-scroll-reveal": {
+    title: "Portfolio Scroll Reveal",
+    description:
+      "A Next.js interaction study recreating a scroll-based reveal effect inspired by portfolio websites.",
   },
 };
 
@@ -35,6 +49,7 @@ export default function ProjectPage({
     return (
       <main className="min-h-screen p-10">
         <h1 className="text-3xl font-bold">Project not found</h1>
+
         <Link className="underline mt-6 inline-block" href="/projects">
           Back to Projects
         </Link>

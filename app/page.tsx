@@ -37,39 +37,51 @@ export default function Home() {
           <h2 className="text-4xl font-semibold text-slate-50">Projects</h2>
 
           <div className="mt-8 space-y-6">
-            <div className="rounded-2xl border border-slate-600 bg-slate-900/60 p-6">
+            <Link
+              href="/projects/hearing-aid-app/"
+              className="block rounded-2xl border border-slate-600 bg-slate-900/60 p-6 transition hover:-translate-y-1 hover:border-sky-400 hover:shadow-xl"
+            >
               <h3 className="text-xl font-medium text-slate-50">
                 Hearing Aid App Redesign
               </h3>
               <p className="mt-2 text-slate-300">
                 Improving quick access and usability for hearing aid users.
               </p>
-            </div>
+              <p className="mt-4 text-sky-300">View project →</p>
+            </Link>
 
-            <div className="rounded-2xl border border-slate-600 bg-slate-900/60 p-6">
+            <Link
+              href="/projects/smart-home-dashboard/"
+              className="block rounded-2xl border border-slate-600 bg-slate-900/60 p-6 transition hover:-translate-y-1 hover:border-sky-400 hover:shadow-xl"
+            >
               <h3 className="text-xl font-medium text-slate-50">
                 Smart Home Dashboard
               </h3>
               <p className="mt-2 text-slate-300">
                 Redesigning device control with a room-based system.
               </p>
-            </div>
+              <p className="mt-4 text-sky-300">View project →</p>
+            </Link>
 
-            <div className="rounded-2xl border border-slate-600 bg-slate-900/60 p-6">
+            <Link
+              href="/projects/jit-website-audit/"
+              className="block rounded-2xl border border-slate-600 bg-slate-900/60 p-6 transition hover:-translate-y-1 hover:border-sky-400 hover:shadow-xl"
+            >
               <h3 className="text-xl font-medium text-slate-50">
                 JIT Website Audit
               </h3>
               <p className="mt-2 text-slate-300">
                 Helping users find resources more efficiently.
               </p>
-            </div>
+              <p className="mt-4 text-sky-300">View project →</p>
+            </Link>
           </div>
 
           <Link
             className="mt-8 inline-block rounded-full border border-sky-400 px-6 py-3 text-sky-300 transition hover:bg-sky-400 hover:text-slate-950"
             href="/projects"
           >
-            View more →
+            View all projects →
           </Link>
         </div>
       </section>
