@@ -59,57 +59,39 @@ export default function Home() {
       </nav>
 
       {/* 1. INTRO */}
-      <section className="fade-in flex min-h-[62vh] flex-col justify-start border-b border-slate-700 pt-32 pb-16">
-        <div className="max-w-7xl">
-          <div className="grid gap-12 md:grid-cols-[1.6fr_0.9fr] md:items-center">
-            <div>
-              <p className="text-4xl font-bold text-slate-200 md:text-5xl">
-                Jairo Martinez Arenal
-              </p>
+      <section className="fade-in flex min-h-[58vh] flex-col justify-start border-b border-slate-700 pt-32 pb-16">
+        <div className="max-w-6xl">
+          <p className="text-5xl font-bold text-slate-200 md:text-6xl">
+            Jairo Martinez Arenal
+          </p>
 
-              <h1 className="mt-5 text-6xl font-bold tracking-tight text-slate-50 md:text-8xl">
-                UX/UI Designer
-              </h1>
+          <h1 className="mt-5 text-6xl font-bold tracking-tight text-sky-300 md:text-8xl">
+            UX/UI Designer
+          </h1>
 
-              <p className="mt-6 max-w-3xl text-xl leading-8 text-slate-300">
-                I design accessible, human-centered digital experiences with a
-                growing focus on front-end development, interaction design, and
-                building tools that feel clear, useful, and easy to navigate.
-              </p>
+          <p className="mt-6 max-w-5xl text-xl leading-8 text-slate-300">
+            I design accessible, human-centered digital experiences with a
+            growing focus on front-end development and product thinking. This
+            summer, I plan to continue sharpening my design process through
+            Design Co&apos;s Summer Upgrade Program while building stronger case
+            studies, cleaner interfaces, and more intentional user flows.
+          </p>
 
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="mailto:jairomartinez565@gmail.com"
-                  className="rounded-full bg-sky-400 px-6 py-3 font-medium text-slate-950 transition hover:bg-sky-300"
-                >
-                  Get In Touch
-                </a>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="mailto:jairomartinez565@gmail.com"
+              className="bg-sky-400 px-7 py-3 font-medium text-slate-950 transition hover:bg-sky-300"
+            >
+              Get In Touch ↗
+            </a>
 
-                <a
-                  href="/J-Portfolio/resume.pdf"
-                  target="_blank"
-                  className="rounded-full border border-sky-400 px-6 py-3 font-medium text-sky-300 transition hover:bg-sky-400 hover:text-slate-950"
-                >
-                  Resume
-                </a>
-              </div>
-            </div>
-
-            <div className="rounded-3xl border border-slate-700 bg-slate-800/60 p-8 shadow-xl">
-              <p className="text-sm uppercase tracking-widest text-sky-300">
-                Currently
-              </p>
-
-              <h2 className="mt-4 text-2xl font-semibold text-slate-50">
-                Growing as a UX designer and front-end builder.
-              </h2>
-
-              <p className="mt-4 leading-7 text-slate-300">
-                This summer, I plan to continue sharpening my design process
-                through Design Co&apos;s Summer Upgrade Program while improving
-                my portfolio, case studies, and development skills.
-              </p>
-            </div>
+            <a
+              href="/J-Portfolio/resume.pdf"
+              target="_blank"
+              className="border border-sky-400 px-7 py-3 font-medium text-sky-300 transition hover:bg-sky-300 hover:text-slate-950"
+            >
+              Resume ↗
+            </a>
           </div>
         </div>
       </section>
@@ -153,7 +135,7 @@ export default function Home() {
           </div>
 
           <Link
-            className="mt-10 inline-block rounded-full border border-sky-400 px-6 py-3 text-sky-300 transition hover:bg-sky-400 hover:text-slate-950"
+            className="mt-10 inline-block border border-sky-400 px-7 py-3 text-sky-300 transition hover:bg-sky-300 hover:text-slate-950"
             href="/projects"
           >
             View all projects →
@@ -177,25 +159,25 @@ export default function Home() {
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
-              className="rounded-full border border-slate-500 px-6 py-3 text-center text-slate-100 transition hover:bg-sky-400 hover:text-slate-950"
+              className="border border-slate-500 px-7 py-3 text-center text-slate-100 transition hover:bg-sky-300 hover:text-slate-950"
               href="/J-Portfolio/resume.pdf"
             >
-              Resume
+              Resume ↗
             </a>
 
             <a
-              className="rounded-full border border-slate-500 px-6 py-3 text-center text-slate-100 transition hover:bg-sky-400 hover:text-slate-950"
+              className="border border-slate-500 px-7 py-3 text-center text-slate-100 transition hover:bg-sky-300 hover:text-slate-950"
               href="https://linkedin.com"
               target="_blank"
             >
-              LinkedIn
+              LinkedIn ↗
             </a>
 
             <a
-              className="rounded-full border border-slate-500 px-6 py-3 text-center text-slate-100 transition hover:bg-sky-400 hover:text-slate-950"
+              className="border border-slate-500 px-7 py-3 text-center text-slate-100 transition hover:bg-sky-300 hover:text-slate-950"
               href="mailto:jairomartinez565@gmail.com"
             >
-              Email
+              Email ↗
             </a>
           </div>
         </div>
