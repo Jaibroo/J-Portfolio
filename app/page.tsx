@@ -59,7 +59,7 @@ export default function Home() {
       </nav>
 
       {/* 1. INTRO */}
-      <section className="fade-in flex min-h-[75vh] flex-col justify-center border-b border-slate-700 pt-20">
+      <section className="fade-in flex min-h-[62vh] flex-col justify-start border-b border-slate-700 pt-32 pb-16">
         <div className="max-w-6xl">
           <div className="flex flex-col gap-10 md:flex-row md:items-center">
             <div className="flex flex-col items-center md:items-start">
@@ -110,7 +110,7 @@ export default function Home() {
       {/* 2. PROJECTS */}
       <section
         id="projects"
-        className="fade-in flex min-h-screen flex-col justify-center border-b border-slate-700 py-24"
+        className="fade-in flex min-h-[85vh] flex-col justify-start border-b border-slate-700 pt-12 pb-20"
       >
         <div className="max-w-7xl">
           <h2 className="text-5xl font-bold text-slate-50">Projects</h2>
