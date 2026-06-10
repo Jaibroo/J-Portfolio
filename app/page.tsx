@@ -6,13 +6,15 @@ import { useEffect } from "react";
 const featuredProjects = [
   {
     title: "Hearing Aid App Redesign",
-    description: "Improving quick access and usability for hearing aid users.",
+    description:
+      "A UX redesign focused on accessibility, clearer controls, and faster hearing aid adjustments.",
     slug: "hearing-aid-app",
     image: "/J-Portfolio/hearing-aid.png",
   },
   {
     title: "JIT Website Audit",
-    description: "Helping users find youth resources more efficiently.",
+    description:
+      "A mobile-first website audit focused on helping young adults find youth resources more efficiently.",
     slug: "jit-website-audit",
     image: "/J-Portfolio/jit-website.png",
   },
@@ -93,7 +95,7 @@ export default function Home() {
       {/* 2. PROJECTS */}
       <section
         id="projects"
-        className="fade-in flex min-h-[70vh] flex-col justify-start border-b border-slate-700 pt-10 pb-16"
+        className="fade-in flex min-h-[80vh] flex-col justify-start border-b border-slate-700 pt-10 pb-16"
       >
         <div className="max-w-7xl">
           <h2 className="text-5xl font-bold text-slate-50">Projects</h2>
@@ -103,26 +105,30 @@ export default function Home() {
               <Link
                 key={project.slug}
                 href={`/projects/${project.slug}/`}
-                className="overflow-hidden border border-slate-600 bg-slate-800/70 shadow-xl transition hover:-translate-y-1 hover:border-sky-400"
+                className="group relative h-[500px] overflow-hidden border border-slate-600 bg-slate-900 shadow-xl transition hover:border-sky-400"
               >
-                <div className="h-64 bg-slate-900">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
 
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold text-slate-50">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-8">
+                  <h3 className="text-3xl font-bold text-slate-50">
                     {project.title}
                   </h3>
+                </div>
 
-                  <p className="mt-3 text-slate-300">
+                <div className="absolute inset-0 flex flex-col justify-end bg-slate-950/80 p-8 opacity-0 transition duration-300 group-hover:opacity-100">
+                  <p className="max-w-xl text-lg leading-7 text-slate-200">
                     {project.description}
                   </p>
 
-                  <p className="mt-6 text-sky-300">View project →</p>
+                  <p className="mt-6 text-xl font-medium text-sky-300">
+                    View Project ↗
+                  </p>
                 </div>
               </Link>
             ))}
