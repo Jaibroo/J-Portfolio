@@ -3,15 +3,34 @@
 import Link from "next/link";
 import { useEffect } from "react";
 
+const featuredProjects = [
+  {
+    title: "Hearing Aid App Redesign",
+    description: "Improving quick access and usability for hearing aid users.",
+    slug: "hearing-aid-app",
+    image: "/J-Portfolio/hearing-aid.png",
+  },
+  {
+    title: "Smart Home Dashboard",
+    description: "Redesigning device control with a room-based system.",
+    slug: "smart-home-dashboard",
+    image: "/J-Portfolio/smart-home.png",
+  },
+  {
+    title: "JIT Website Audit",
+    description: "Helping users find youth resources more efficiently.",
+    slug: "jit-website-audit",
+    image: "/J-Portfolio/jit-website.png",
+  },
+];
+
 export default function Home() {
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-in");
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
+        if (entry.isIntersecting) entry.target.classList.add("visible");
       });
     });
 
@@ -20,8 +39,27 @@ export default function Home() {
 
   return (
     <main className="min-h-screen px-10 py-20">
+      {/* NAV */}
+      <nav className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border-b border-slate-700 bg-slate-950/90 px-10 py-5 backdrop-blur">
+        <Link href="/" className="text-xl font-bold text-slate-50">
+          Jairo Martinez
+        </Link>
+
+        <div className="flex gap-6 text-slate-300">
+          <a href="#projects" className="hover:text-sky-300">
+            Projects
+          </a>
+          <a href="#contact" className="hover:text-sky-300">
+            Contact
+          </a>
+          <a href="/J-Portfolio/resume.pdf" className="hover:text-sky-300">
+            Resume
+          </a>
+        </div>
+      </nav>
+
       {/* 1. INTRO */}
-      <section className="fade-in flex min-h-[80vh] flex-col justify-center border-b border-slate-700">
+      <section className="fade-in flex min-h-[75vh] flex-col justify-center border-b border-slate-700 pt-20">
         <div className="max-w-6xl">
           <div className="flex flex-col gap-10 md:flex-row md:items-center">
             <div className="flex flex-col items-center md:items-start">
@@ -70,53 +108,45 @@ export default function Home() {
       </section>
 
       {/* 2. PROJECTS */}
-      <section className="fade-in min-h-screen flex flex-col justify-center border-b border-slate-700">
-        <div className="max-w-3xl rounded-3xl bg-slate-800/70 p-10 shadow-xl">
-          <h2 className="text-4xl font-semibold text-slate-50">Projects</h2>
+      <section
+        id="projects"
+        className="fade-in flex min-h-screen flex-col justify-center border-b border-slate-700 py-24"
+      >
+        <div className="max-w-7xl">
+          <h2 className="text-5xl font-bold text-slate-50">Projects</h2>
 
-          <div className="mt-8 space-y-6">
-            <Link
-              href="/projects/hearing-aid-app/"
-              className="block rounded-2xl border border-slate-600 bg-slate-900/60 p-6 transition hover:-translate-y-1 hover:border-sky-400 hover:shadow-xl"
-            >
-              <h3 className="text-xl font-medium text-slate-50">
-                Hearing Aid App Redesign
-              </h3>
-              <p className="mt-2 text-slate-300">
-                Improving quick access and usability for hearing aid users.
-              </p>
-              <p className="mt-4 text-sky-300">View project →</p>
-            </Link>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {featuredProjects.map((project) => (
+              <Link
+                key={project.slug}
+                href={`/projects/${project.slug}/`}
+                className="overflow-hidden rounded-3xl border border-slate-600 bg-slate-800/70 shadow-xl transition hover:-translate-y-1 hover:border-sky-400"
+              >
+                <div className="h-48 bg-slate-900">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
 
-            <Link
-              href="/projects/smart-home-dashboard/"
-              className="block rounded-2xl border border-slate-600 bg-slate-900/60 p-6 transition hover:-translate-y-1 hover:border-sky-400 hover:shadow-xl"
-            >
-              <h3 className="text-xl font-medium text-slate-50">
-                Smart Home Dashboard
-              </h3>
-              <p className="mt-2 text-slate-300">
-                Redesigning device control with a room-based system.
-              </p>
-              <p className="mt-4 text-sky-300">View project →</p>
-            </Link>
+                <div className="p-6">
+                  <h3 className="text-2xl font-semibold text-slate-50">
+                    {project.title}
+                  </h3>
 
-            <Link
-              href="/projects/jit-website-audit/"
-              className="block rounded-2xl border border-slate-600 bg-slate-900/60 p-6 transition hover:-translate-y-1 hover:border-sky-400 hover:shadow-xl"
-            >
-              <h3 className="text-xl font-medium text-slate-50">
-                JIT Website Audit
-              </h3>
-              <p className="mt-2 text-slate-300">
-                Helping users find resources more efficiently.
-              </p>
-              <p className="mt-4 text-sky-300">View project →</p>
-            </Link>
+                  <p className="mt-3 text-slate-300">
+                    {project.description}
+                  </p>
+
+                  <p className="mt-6 text-sky-300">View project →</p>
+                </div>
+              </Link>
+            ))}
           </div>
 
           <Link
-            className="mt-8 inline-block rounded-full border border-sky-400 px-6 py-3 text-sky-300 transition hover:bg-sky-400 hover:text-slate-950"
+            className="mt-10 inline-block rounded-full border border-sky-400 px-6 py-3 text-sky-300 transition hover:bg-sky-400 hover:text-slate-950"
             href="/projects"
           >
             View all projects →
@@ -124,21 +154,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. ABOUT */}
-      <section className="fade-in min-h-screen flex flex-col justify-center border-b border-slate-700">
-        <div className="max-w-2xl rounded-3xl bg-slate-800/70 p-10 shadow-xl">
-          <h2 className="text-4xl font-semibold text-slate-50">About Me</h2>
-          <p className="mt-6 text-lg leading-8 text-slate-300">
-            I'm a Cognitive Science student at UC San Diego specializing in
-            Design and Interaction. I enjoy solving real-world problems through
-            thoughtful user experiences, accessibility-focused design, and
-            front-end development.
-          </p>
-        </div>
-      </section>
-
-      {/* 4. CONTACT */}
-      <section className="fade-in min-h-screen flex flex-col justify-center">
+      {/* 3. CONTACT */}
+      <section
+        id="contact"
+        className="fade-in flex min-h-[70vh] flex-col justify-center"
+      >
         <div className="max-w-2xl rounded-3xl bg-slate-800/70 p-10 shadow-xl">
           <p className="text-sm uppercase tracking-widest text-sky-300">
             Like what you see?
