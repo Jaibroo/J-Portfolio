@@ -21,44 +21,50 @@ export default function Home() {
   return (
     <main className="min-h-screen px-10 py-20">
       {/* 1. INTRO */}
-      <section className="fade-in min-h-screen flex flex-col items-center justify-center border-b border-slate-700 text-center">
-        <div className="mx-auto max-w-5xl rounded-3xl bg-slate-800/70 p-12 shadow-xl">
-          <div className="mx-auto h-44 w-44 overflow-hidden rounded-full border-4 border-sky-400 bg-slate-900 shadow-xl">
-            <img
-              src="/J-Portfolio/profile.png"
-              alt="Jairo Martinez"
-              className="h-full w-full object-cover"
-            />
-          </div>
+      <section className="fade-in flex min-h-[80vh] flex-col justify-center border-b border-slate-700">
+        <div className="max-w-6xl">
+          <div className="flex flex-col gap-10 md:flex-row md:items-center">
+            <div className="flex flex-col items-center md:items-start">
+              <div className="h-56 w-56 overflow-hidden rounded-full border-4 border-sky-400 bg-slate-900 shadow-xl">
+                <img
+                  src="/J-Portfolio/profile.png"
+                  alt="Jairo Martinez"
+                  className="h-full w-full object-cover"
+                />
+              </div>
 
-          <p className="mt-6 text-xl font-medium text-slate-300">
-            Jairo Martinez
-          </p>
+              <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
+                <a
+                  href="mailto:jairomartinez565@gmail.com"
+                  className="rounded-full bg-sky-400 px-6 py-3 font-medium text-slate-950 transition hover:bg-sky-300"
+                >
+                  Get In Touch
+                </a>
 
-          <h1 className="mt-4 text-6xl font-bold tracking-tight text-slate-50 md:text-8xl">
-            UX/UI Designer
-          </h1>
+                <a
+                  href="/J-Portfolio/resume.pdf"
+                  target="_blank"
+                  className="rounded-full border border-sky-400 px-6 py-3 font-medium text-sky-300 transition hover:bg-sky-400 hover:text-slate-950"
+                >
+                  Resume
+                </a>
+              </div>
+            </div>
 
-          <p className="mx-auto mt-6 max-w-2xl text-xl leading-8 text-slate-300">
-            A UX-focused designer interested in building intuitive,
-            human-centered tools.
-          </p>
+            <div className="text-center md:text-left">
+              <p className="text-3xl font-bold text-slate-200">
+                Jairo Martinez
+              </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:jairomartinez565@gmail.com"
-              className="rounded-full bg-sky-400 px-6 py-3 font-medium text-slate-950 transition hover:bg-sky-300"
-            >
-              Get In Touch
-            </a>
+              <h1 className="mt-5 text-6xl font-bold tracking-tight text-slate-50 md:text-8xl">
+                UX/UI Designer
+              </h1>
 
-            <a
-              href="/J-Portfolio/resume.pdf"
-              target="_blank"
-              className="rounded-full border border-sky-400 px-6 py-3 font-medium text-sky-300 transition hover:bg-sky-400 hover:text-slate-950"
-            >
-              Resume
-            </a>
+              <p className="mt-6 max-w-2xl text-xl leading-8 text-slate-300">
+                A UX-focused designer interested in building intuitive,
+                human-centered tools.
+              </p>
+            </div>
           </div>
         </div>
       </section>
