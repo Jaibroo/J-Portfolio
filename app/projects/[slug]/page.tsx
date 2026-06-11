@@ -6,92 +6,94 @@ const projectData = {
     eyebrow: "ACM Summer Projects • 2025",
     title: "Lumen — Hearing Aid App",
     description:
-      "A hearing aid companion app designed to help users adjust sound settings, troubleshoot connection issues, and feel more confident in changing listening environments.",
+      "A hearing aid companion app for users who need clearer controls, easier troubleshooting, and less stressful ways to manage their hearing aids day to day.",
     image: "/J-Portfolio/hearing-aid.png",
     role: "UX Designer",
     timeline: "June – September 2025",
     team: "4 Designers, 1 Project Manager",
-    skills: ["UX Research", "Interaction Design", "Accessibility", "Prototyping"],
+    skills: ["UX Research", "Accessibility", "Interaction Design", "Prototyping"],
     sections: [
       {
         id: "problem",
         eyebrow: "Problem",
-        title: "Everyday hearing adjustments often require too much effort.",
+        title: "Hearing aid apps often make simple tasks feel harder than they should.",
         body: [
-          "For many hearing aid users, adjusting sound settings, switching programs, or fixing Bluetooth issues can become frustrating in the exact moments when support needs to feel quick and reliable.",
+          "Our starting point was a clear pattern: many hearing aid users were not struggling because they lacked motivation. They were struggling because the apps asked too much of them at the wrong moments.",
+          "Common issues included unreliable Bluetooth pairing, small buttons, cluttered menus, unclear instructions, and support options that were difficult to find. For older adults or users with accessibility needs, these problems could turn a quick adjustment into something stressful.",
         ],
-        imageLabel: "Problem / user pain point visuals",
+        imageLabel: "Add screenshots of existing app problems or early notes here",
       },
       {
         id: "research",
         eyebrow: "Research",
-        title: "Understanding the experiences behind the complaints.",
+        title: "We focused on where users felt stuck, not just what features existed.",
         body: [
-          "Our team interviewed hearing aid users and reviewed existing companion apps to understand where people struggled most. We focused less on advertised features and more on what users needed when their environment changed or something stopped working.",
+          "We reviewed hearing aid companion apps and user feedback from products like Oticon, MyPhonak, Cochlear, ReSound, and Widex. I learned that many complaints were less about wanting a flashy app and more about wanting the app to feel dependable.",
+          "The research helped us narrow the project around confidence: Can users understand what is happening? Can they recover when something breaks? Can they make changes without needing someone else to step in?",
         ],
         cards: [
           {
-            title: "Connectivity uncertainty",
-            text: "Users were often unsure whether the hearing aid, phone, or app was causing the problem.",
+            title: "Connection issues",
+            text: "Users often did not know whether the hearing aid, phone, Bluetooth, or app was causing the problem.",
           },
           {
-            title: "Hidden controls",
-            text: "Useful settings were often buried behind menus or unavailable without audiologist support.",
+            title: "Cluttered navigation",
+            text: "Important controls were hard to spot, especially when menus were dense or labels were unclear.",
           },
           {
-            title: "Technical language",
-            text: "Terms like noise suppression and directional microphones were not always clear to users.",
+            title: "Support gap",
+            text: "When problems happened, users were often pushed toward email support instead of getting help inside the app.",
           },
           {
-            title: "Delayed support",
-            text: "Troubleshooting often required searching, calling support, or waiting for appointments.",
+            title: "Older adult needs",
+            text: "Small text, tiny buttons, and technical language made the app harder for seniors and less tech-comfortable users.",
           },
         ],
       },
       {
         id: "design-decisions",
         eyebrow: "Design Decisions",
-        title: "One interface was not enough.",
+        title: "The app needed to reduce pressure, not just add more controls.",
         body: [
-          "Early ideas focused on adding more controls, but that created a new problem: more functionality also meant more complexity. A first-time user and a technically confident user did not need the same interface.",
+          "Early ideas leaned toward adding more customization. But more controls can also create more confusion. The better direction was to separate quick everyday adjustments from deeper settings.",
         ],
         featureImages: [
           {
             title: "Simple Mode",
-            text: "Quick adjustments, plain language, and fewer decisions.",
+            text: "A calmer interface for quick changes, larger touch targets, and plain language controls.",
           },
           {
             title: "Tech Mode",
-            text: "Deeper customization for users who want more control.",
+            text: "A more detailed interface for users who want deeper control over sound settings and listening programs.",
           },
         ],
       },
       {
         id: "solution",
         eyebrow: "Solution",
-        title: "A companion app focused on confidence, not configuration.",
+        title: "Lumen helps users adjust, recover, and keep moving.",
         body: [
-          "Lumen combines quick sound adjustments, personalized programs, environment-based recommendations, and guided troubleshooting into one companion experience.",
+          "The final direction centered on daily use: quick sound adjustments, clearer connection status, environment-based settings, and guided troubleshooting.",
         ],
         featureImages: [
           {
             title: "Environment Optimizer",
-            text: "Adjust settings around real situations like restaurants, calls, TV, and outdoors.",
+            text: "Instead of asking users to understand technical audio terms first, Lumen lets them start with situations like restaurants, TV, phone calls, or outdoors.",
           },
           {
             title: "Guided Troubleshooting",
-            text: "Help users recover quickly when connection or audio issues appear.",
+            text: "When something goes wrong, the app gives users a direct recovery path instead of making them search through support pages.",
           },
         ],
       },
       {
         id: "reflection",
         eyebrow: "Reflection",
-        title: "What this project helped me practice.",
+        title: "This project changed how I think about accessibility.",
         body: [
-          "This was my first project working with a design team on a product where the user needs felt specific and higher-stakes. At first, I thought a stronger app meant adding more features. As the research developed, I realized the better question was whether users could actually find, understand, and trust those features when they needed them.",
-          "The biggest shift was learning to design around confidence. For hearing aid users, a confusing screen is not just bad usability — it can affect whether someone feels comfortable participating in a conversation or solving a problem on their own.",
-          "Looking back, this project shows where I started as a designer: focused on screens, flows, and feature ideas. It helped me build the foundation for later projects, where I became more intentional about research, rationale, and explaining why a design decision should change.",
+          "This was my first project working with a design team on a problem where the stakes felt more real. At first, I thought a better app meant giving users more features. Research showed me that more features only help if people can find them, understand them, and trust them.",
+          "The biggest lesson was that accessibility is not only about making text bigger or buttons easier to tap. It also shows up in wording, menu structure, error recovery, and how much confidence a user has when something does not work.",
+          "Looking back, Lumen shows where I started: focused on screens, flows, and feature ideas. It gave me a foundation for later work, where I became more careful about explaining why a design decision should change.",
         ],
       },
     ],
@@ -138,6 +140,7 @@ export default async function ProjectPage({
     return (
       <main className="min-h-screen bg-slate-900 p-10 font-[Calluna,Georgia,serif] text-white">
         <h1 className="text-3xl font-bold">Project not found</h1>
+
         <Link className="mt-6 inline-block underline" href="/projects">
           Back to Projects
         </Link>
@@ -156,15 +159,23 @@ export default async function ProjectPage({
           <a href="#overview" className="hover:text-sky-300">
             Overview
           </a>
+
           {project.sections.map((section) => (
-            <a key={section.id} href={`#${section.id}`} className="hover:text-sky-300">
+            <a
+              key={section.id}
+              href={`#${section.id}`}
+              className="hover:text-sky-300"
+            >
               {section.eyebrow}
             </a>
           ))}
         </nav>
       </aside>
 
-      <section id="overview" className="mx-auto max-w-5xl border-b border-slate-700 pb-12">
+      <section
+        id="overview"
+        className="mx-auto max-w-5xl border-b border-slate-700 pb-12"
+      >
         <p className="text-sm uppercase tracking-widest text-slate-400">
           {project.eyebrow}
         </p>
@@ -178,7 +189,7 @@ export default async function ProjectPage({
         </p>
 
         {"image" in project && (
-          <div className="mt-8 h-[420px] overflow-hidden border border-slate-700 bg-slate-800">
+          <div className="mt-8 h-[390px] overflow-hidden border border-slate-700 bg-slate-800">
             <Image
               src={project.image}
               alt={project.title}
@@ -191,22 +202,31 @@ export default async function ProjectPage({
 
         <div className="mt-8 grid gap-8 text-slate-300 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="text-sm uppercase tracking-widest text-slate-500">Role</p>
+            <p className="text-sm uppercase tracking-widest text-slate-500">
+              Role
+            </p>
             <p className="mt-3 text-lg text-slate-200">{project.role}</p>
           </div>
 
           <div>
-            <p className="text-sm uppercase tracking-widest text-slate-500">Timeline</p>
+            <p className="text-sm uppercase tracking-widest text-slate-500">
+              Timeline
+            </p>
             <p className="mt-3 text-lg text-slate-200">{project.timeline}</p>
           </div>
 
           <div>
-            <p className="text-sm uppercase tracking-widest text-slate-500">Team</p>
+            <p className="text-sm uppercase tracking-widest text-slate-500">
+              Team
+            </p>
             <p className="mt-3 text-lg text-slate-200">{project.team}</p>
           </div>
 
           <div>
-            <p className="text-sm uppercase tracking-widest text-slate-500">Skills</p>
+            <p className="text-sm uppercase tracking-widest text-slate-500">
+              Skills
+            </p>
+
             <div className="mt-3 space-y-1 text-lg text-slate-200">
               {project.skills.map((skill) => (
                 <p key={skill}>{skill}</p>
@@ -232,24 +252,37 @@ export default async function ProjectPage({
 
           <div className="mt-6 space-y-5">
             {section.body.map((paragraph) => (
-              <p key={paragraph} className="max-w-4xl text-xl leading-8 text-slate-300">
+              <p
+                key={paragraph}
+                className="max-w-4xl text-xl leading-8 text-slate-300"
+              >
                 {paragraph}
               </p>
             ))}
           </div>
 
           {"imageLabel" in section && section.imageLabel && (
-            <div className="mt-10 flex h-[360px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">
-              <p className="text-lg uppercase tracking-widest">{section.imageLabel}</p>
+            <div className="mt-10 flex h-[340px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">
+              <p className="text-lg uppercase tracking-widest">
+                {section.imageLabel}
+              </p>
             </div>
           )}
 
           {"cards" in section && section.cards && (
             <div className="mt-10 grid gap-5 md:grid-cols-2">
               {section.cards.map((card) => (
-                <div key={card.title} className="border border-slate-700 bg-slate-800/60 p-6">
-                  <h3 className="text-2xl font-bold text-slate-50">{card.title}</h3>
-                  <p className="mt-4 text-lg leading-7 text-slate-300">{card.text}</p>
+                <div
+                  key={card.title}
+                  className="border border-slate-700 bg-slate-800/60 p-6"
+                >
+                  <h3 className="text-2xl font-bold text-slate-50">
+                    {card.title}
+                  </h3>
+
+                  <p className="mt-4 text-lg leading-7 text-slate-300">
+                    {card.text}
+                  </p>
                 </div>
               ))}
             </div>
@@ -262,15 +295,20 @@ export default async function ProjectPage({
                   key={item.title}
                   className="grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-center"
                 >
-                  <div className="flex h-[420px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">
+                  <div className="flex h-[400px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">
                     <p className="text-lg uppercase tracking-widest">
                       Image Placeholder {index + 1}
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-3xl font-bold text-slate-50">{item.title}</h3>
-                    <p className="mt-4 text-xl leading-8 text-slate-300">{item.text}</p>
+                    <h3 className="text-3xl font-bold text-slate-50">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-4 text-xl leading-8 text-slate-300">
+                      {item.text}
+                    </p>
                   </div>
                 </div>
               ))}
