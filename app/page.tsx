@@ -33,6 +33,10 @@ export default function Home() {
     elements.forEach((el) => observer.observe(el));
   }, []);
 
+  const copyEmail = () => {
+    navigator.clipboard.writeText("Jairomartinez565@gmail.com");
+  };
+
   return (
     <main className="min-h-screen px-10 py-16">
       {/* NAV */}
@@ -45,7 +49,7 @@ export default function Home() {
           <a href="#projects" className="hover:text-sky-300">
             Projects
           </a>
-          <a href="#contact" className="hover:text-sky-300">
+          <a href="#footer" className="hover:text-sky-300">
             Contact
           </a>
           <a href="/J-Portfolio/resume.pdf" className="hover:text-sky-300">
@@ -136,45 +140,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. CONTACT */}
-      <section
-        id="contact"
-        className="fade-in flex min-h-[70vh] flex-col justify-center"
+      {/* FOOTER */}
+      <footer
+        id="footer"
+        className="flex flex-col justify-between gap-6 py-10 text-lg text-slate-400 md:flex-row md:items-center"
       >
-        <div className="max-w-2xl bg-slate-800/70 p-10 shadow-xl">
-          <p className="text-sm uppercase tracking-widest text-sky-300">
-            Like what you see?
-          </p>
+        <p className="uppercase tracking-widest">
+          Designed + coded by Jairo Martinez Arenal
+        </p>
 
-          <h2 className="mt-3 text-5xl font-bold text-slate-50">
-            Let&apos;s Connect
-          </h2>
+        <div className="flex flex-wrap gap-8 uppercase tracking-widest">
+          <a
+            href="https://www.linkedin.com/in/jairo-martinez-arenal-4b9811323/"
+            target="_blank"
+            className="hover:text-sky-300"
+          >
+            LinkedIn
+          </a>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a
-              className="flex items-center justify-center gap-2 border border-slate-500 px-8 py-4 text-center text-lg text-slate-100 transition hover:bg-sky-300 hover:text-slate-950"
-              href="/J-Portfolio/resume.pdf"
-            >
-              Resume <span>↗</span>
-            </a>
+          <button
+            onClick={copyEmail}
+            className="uppercase tracking-widest hover:text-sky-300"
+          >
+            Email
+          </button>
 
-            <a
-              className="flex items-center justify-center gap-2 border border-slate-500 px-8 py-4 text-center text-lg text-slate-100 transition hover:bg-sky-300 hover:text-slate-950"
-              href="https://linkedin.com"
-              target="_blank"
-            >
-              LinkedIn <span>↗</span>
-            </a>
-
-            <a
-              className="flex items-center justify-center gap-2 border border-slate-500 px-8 py-4 text-center text-lg text-slate-100 transition hover:bg-sky-300 hover:text-slate-950"
-              href="mailto:jairomartinez565@gmail.com"
-            >
-              Email <span>↗</span>
-            </a>
-          </div>
+          <a
+            href="https://github.com/Jaibroo"
+            target="_blank"
+            className="hover:text-sky-300"
+          >
+            GitHub
+          </a>
         </div>
-      </section>
+      </footer>
     </main>
   );
 }
