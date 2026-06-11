@@ -150,7 +150,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer
         id="footer"
-        className="relative flex flex-col justify-between gap-4 py-5 text-base text-slate-400 md:flex-row md:items-center"
+        className="relative flex flex-col justify-between gap-0 py-6 text-base text-slate-400 md:flex-row md:items-center"
       >
         <p className="uppercase tracking-widest">Created by yours truly.</p>
 
