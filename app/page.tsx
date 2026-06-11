@@ -62,7 +62,12 @@ export default function Home() {
           <a href="#footer" className="hover:text-sky-300">
             Contact
           </a>
-          <a href="/J-Portfolio/resume.pdf" className="hover:text-sky-300">
+          <a
+            href="/J-Portfolio/JairoR.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-sky-300"
+          >
             Resume
           </a>
         </div>
@@ -96,8 +101,9 @@ export default function Home() {
             </a>
 
             <a
-              href="/J-Portfolio/resume.pdf"
+              href="/J-Portfolio/JairoR.pdf"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 border border-sky-400 px-8 py-4 text-lg font-medium text-sky-300 transition hover:bg-sky-300 hover:text-slate-950"
             >
               Resume <span>↗</span>
