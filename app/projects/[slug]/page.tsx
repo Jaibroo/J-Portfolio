@@ -369,7 +369,13 @@ export default async function ProjectPage({
         </p>
 
         {"image" in project && (
-          <div className="mt-8 h-[390px] overflow-hidden border border-slate-700 bg-slate-800">
+          <div
+            className={
+              project.title === "JIT Website Audit"
+                ? "mt-8 h-[390px] overflow-hidden border border-slate-700 bg-slate-800 px-2"
+                : "mt-8 h-[390px] overflow-hidden border border-slate-700 bg-slate-800"
+            }
+          >
             <Image
               src={project.image}
               alt={project.title}
@@ -454,7 +460,13 @@ export default async function ProjectPage({
           </div>
 
           {"imageLabel" in section && section.imageLabel && (
-            <div className="mt-10 h-[340px] overflow-hidden border border-slate-700 bg-slate-800">
+            <div
+              className={
+                "imageSrc" in section && section.imageSrc === "/J-Portfolio/jit2.png"
+                  ? "mt-10 h-[340px] overflow-hidden border border-slate-700 bg-slate-800 px-2"
+                  : "mt-10 h-[340px] overflow-hidden border border-slate-700 bg-slate-800"
+              }
+            >
               {"imageSrc" in section && section.imageSrc ? (
                 <Image
                   src={section.imageSrc}
@@ -652,9 +664,11 @@ export default async function ProjectPage({
                   <div
                     key={label}
                     className={
-                      index === 0
-                        ? "h-[420px] overflow-hidden border border-slate-700 bg-slate-800 md:col-span-2"
-                        : "h-[320px] overflow-hidden border border-slate-700 bg-slate-800"
+                      index === 0 && src === "/J-Portfolio/jit10.png"
+                        ? "h-[420px] overflow-hidden border border-slate-700 bg-slate-800 px-2 md:col-span-2"
+                        : index === 0
+                          ? "h-[420px] overflow-hidden border border-slate-700 bg-slate-800 md:col-span-2"
+                          : "h-[320px] overflow-hidden border border-slate-700 bg-slate-800"
                     }
                   >
                     {src ? (
