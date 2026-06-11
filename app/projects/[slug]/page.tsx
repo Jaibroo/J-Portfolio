@@ -18,18 +18,17 @@ const projectData = {
         eyebrow: "Problem",
         title: "Hearing aid apps often make simple tasks feel harder than they should.",
         body: [
-          "Our starting point was a clear pattern: many hearing aid users were not struggling because they lacked motivation. They were struggling because the apps asked too much of them at the wrong moments.",
-          "Common issues included unreliable Bluetooth pairing, small buttons, cluttered menus, unclear instructions, and support options that were difficult to find. For older adults or users with accessibility needs, these problems could turn a quick adjustment into something stressful.",
+          "Our starting point was a clear pattern: users were not struggling because they lacked motivation. They were struggling because the apps asked too much of them at the wrong moments.",
+          "Common issues included unreliable Bluetooth pairing, small buttons, cluttered menus, unclear instructions, and support options that were difficult to find.",
         ],
-        imageLabel: "Add screenshots of existing app problems or early notes here",
+        imageLabel: "Existing app issues / competitor screenshots",
       },
       {
         id: "research",
         eyebrow: "Research",
         title: "We focused on where users felt stuck, not just what features existed.",
         body: [
-          "We reviewed hearing aid companion apps and user feedback from products like Oticon, MyPhonak, Cochlear, ReSound, and Widex. I learned that many complaints were less about wanting a flashy app and more about wanting the app to feel dependable.",
-          "The research helped us narrow the project around confidence: Can users understand what is happening? Can they recover when something breaks? Can they make changes without needing someone else to step in?",
+          "We reviewed hearing aid companion apps and user feedback from products like Oticon, MyPhonak, Cochlear, ReSound, and Widex. The main pattern was not that users wanted a more advanced app. They wanted the app to feel dependable when they needed it.",
         ],
         cards: [
           {
@@ -51,39 +50,73 @@ const projectData = {
         ],
       },
       {
-        id: "design-decisions",
-        eyebrow: "Design Decisions",
-        title: "The app needed to reduce pressure, not just add more controls.",
+        id: "early-concepts",
+        eyebrow: "Early Concepts",
+        title: "At first, we treated the problem like a feature gap.",
         body: [
-          "Early ideas leaned toward adding more customization. But more controls can also create more confusion. The better direction was to separate quick everyday adjustments from deeper settings.",
+          "Our early direction leaned toward adding more controls, more customization, and more ways to adjust sound. That seemed helpful at first, but it also risked making the app harder to scan and harder to trust.",
+        ],
+        splitImages: [
+          {
+            label: "Early dashboard sketch / wireframe",
+          },
+          {
+            label: "Early audio controls / feature ideas",
+          },
+        ],
+      },
+      {
+        id: "iteration",
+        eyebrow: "Design Evolution",
+        title: "The design improved when we stopped treating every user the same.",
+        body: [
+          "The biggest revision was moving away from one interface for everyone. A first-time user and a technically confident user needed different levels of control, so we separated quick daily adjustments from deeper settings.",
+        ],
+        comparison: {
+          beforeTitle: "Before",
+          beforeText:
+            "One general interface with too many settings competing for attention.",
+          afterTitle: "After",
+          afterText:
+            "A dual-mode structure: Simple Mode for quick changes and Tech Mode for deeper control.",
+          reason:
+            "We made this change because more functionality did not automatically mean more usability. The interface needed to match different levels of comfort instead of forcing every user through the same flow.",
+        },
+      },
+      {
+        id: "design-decisions",
+        eyebrow: "Design Rationale",
+        title: "Each revision was tied back to a specific user problem.",
+        body: [
+          "Rather than presenting features as standalone ideas, we framed each major design choice around a user need we found in research.",
         ],
         featureImages: [
           {
             title: "Simple Mode",
-            text: "A calmer interface for quick changes, larger touch targets, and plain language controls.",
+            text: "Created for users who need quick changes, larger touch targets, and plain language controls.",
           },
           {
-            title: "Tech Mode",
-            text: "A more detailed interface for users who want deeper control over sound settings and listening programs.",
+            title: "Guided Troubleshooting",
+            text: "Added because users often did not know where a connection issue was coming from.",
+          },
+          {
+            title: "Environment Optimizer",
+            text: "Added because users think in situations like restaurants, TV, and phone calls — not audio engineering terms.",
           },
         ],
       },
       {
         id: "solution",
-        eyebrow: "Solution",
+        eyebrow: "Final Solution",
         title: "Lumen helps users adjust, recover, and keep moving.",
         body: [
           "The final direction centered on daily use: quick sound adjustments, clearer connection status, environment-based settings, and guided troubleshooting.",
         ],
-        featureImages: [
-          {
-            title: "Environment Optimizer",
-            text: "Instead of asking users to understand technical audio terms first, Lumen lets them start with situations like restaurants, TV, phone calls, or outdoors.",
-          },
-          {
-            title: "Guided Troubleshooting",
-            text: "When something goes wrong, the app gives users a direct recovery path instead of making them search through support pages.",
-          },
+        galleryImages: [
+          "Final dashboard screen",
+          "Simple Mode screen",
+          "Environment Optimizer screen",
+          "Troubleshooting flow screen",
         ],
       },
       {
@@ -91,7 +124,7 @@ const projectData = {
         eyebrow: "Reflection",
         title: "This project changed how I think about accessibility.",
         body: [
-          "This was my first project working with a design team on a problem where the stakes felt more real. At first, I thought a better app meant giving users more features. Research showed me that more features only help if people can find them, understand them, and trust them.",
+          "This was my first project working with a design team on a problem where the user needs felt specific and higher-stakes. At first, I thought a better app meant giving users more features. Research showed me that more features only help if people can find them, understand them, and trust them.",
           "The biggest lesson was that accessibility is not only about making text bigger or buttons easier to tap. It also shows up in wording, menu structure, error recovery, and how much confidence a user has when something does not work.",
           "Looking back, Lumen shows where I started: focused on screens, flows, and feature ideas. It gave me a foundation for later work, where I became more careful about explaining why a design decision should change.",
         ],
@@ -236,29 +269,41 @@ export default async function ProjectPage({
         </div>
       </section>
 
-      {project.sections.map((section) => (
+      {project.sections.map((section, sectionIndex) => (
         <section
           key={section.id}
           id={section.id}
           className="mx-auto max-w-5xl border-b border-slate-700 py-16 last:border-b-0"
         >
-          <p className="text-sm uppercase tracking-widest text-sky-300">
-            {section.eyebrow}
-          </p>
-
-          <h2 className="mt-4 max-w-4xl text-4xl font-bold leading-tight text-slate-50 md:text-5xl">
-            {section.title}
-          </h2>
-
-          <div className="mt-6 space-y-5">
-            {section.body.map((paragraph) => (
-              <p
-                key={paragraph}
-                className="max-w-4xl text-xl leading-8 text-slate-300"
-              >
-                {paragraph}
+          <div
+            className={
+              sectionIndex % 2 === 0
+                ? "grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-start"
+                : "grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-start"
+            }
+          >
+            <div className={sectionIndex % 2 === 0 ? "md:order-1" : "md:order-2"}>
+              <p className="text-sm uppercase tracking-widest text-sky-300">
+                {section.eyebrow}
               </p>
-            ))}
+
+              <h2 className="mt-4 text-4xl font-bold leading-tight text-slate-50 md:text-5xl">
+                {section.title}
+              </h2>
+            </div>
+
+            <div className={sectionIndex % 2 === 0 ? "md:order-2" : "md:order-1"}>
+              <div className="space-y-5">
+                {section.body.map((paragraph) => (
+                  <p
+                    key={paragraph}
+                    className="text-xl leading-8 text-slate-300"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
 
           {"imageLabel" in section && section.imageLabel && (
@@ -288,14 +333,87 @@ export default async function ProjectPage({
             </div>
           )}
 
+          {"splitImages" in section && section.splitImages && (
+            <div className="mt-10 grid gap-5 md:grid-cols-2">
+              {section.splitImages.map((item) => (
+                <div
+                  key={item.label}
+                  className="flex h-[360px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400"
+                >
+                  <p className="text-lg uppercase tracking-widest">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {"comparison" in section && section.comparison && (
+            <div className="mt-10 space-y-6">
+              <div className="grid gap-5 md:grid-cols-2">
+                <div className="border border-slate-700 bg-slate-800/60 p-6">
+                  <p className="text-sm uppercase tracking-widest text-slate-500">
+                    {section.comparison.beforeTitle}
+                  </p>
+
+                  <div className="mt-5 flex h-[280px] items-center justify-center border border-dashed border-slate-600 bg-slate-900/70 text-center text-slate-400">
+                    <p className="uppercase tracking-widest">
+                      Before Image Placeholder
+                    </p>
+                  </div>
+
+                  <p className="mt-5 text-lg leading-7 text-slate-300">
+                    {section.comparison.beforeText}
+                  </p>
+                </div>
+
+                <div className="border border-sky-400 bg-slate-800/60 p-6">
+                  <p className="text-sm uppercase tracking-widest text-sky-300">
+                    {section.comparison.afterTitle}
+                  </p>
+
+                  <div className="mt-5 flex h-[280px] items-center justify-center border border-dashed border-sky-500 bg-slate-900/70 text-center text-sky-300">
+                    <p className="uppercase tracking-widest">
+                      After Image Placeholder
+                    </p>
+                  </div>
+
+                  <p className="mt-5 text-lg leading-7 text-slate-300">
+                    {section.comparison.afterText}
+                  </p>
+                </div>
+              </div>
+
+              <div className="border-l-4 border-sky-300 bg-slate-800/60 p-6">
+                <p className="text-sm uppercase tracking-widest text-sky-300">
+                  Why this changed
+                </p>
+
+                <p className="mt-3 text-xl leading-8 text-slate-200">
+                  {section.comparison.reason}
+                </p>
+              </div>
+            </div>
+          )}
+
           {"featureImages" in section && section.featureImages && (
-            <div className="mt-10 space-y-10">
+            <div className="mt-10 space-y-12">
               {section.featureImages.map((item, index) => (
                 <div
                   key={item.title}
-                  className="grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-center"
+                  className={
+                    index % 2 === 0
+                      ? "grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-center"
+                      : "grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-center"
+                  }
                 >
-                  <div className="flex h-[400px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">
+                  <div
+                    className={
+                      index % 2 === 0
+                        ? "flex h-[400px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400"
+                        : "flex h-[400px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400 md:order-2"
+                    }
+                  >
                     <p className="text-lg uppercase tracking-widest">
                       Image Placeholder {index + 1}
                     </p>
@@ -310,6 +428,23 @@ export default async function ProjectPage({
                       {item.text}
                     </p>
                   </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {"galleryImages" in section && section.galleryImages && (
+            <div className="mt-10 grid gap-5 md:grid-cols-2">
+              {section.galleryImages.map((label, index) => (
+                <div
+                  key={label}
+                  className={
+                    index === 0
+                      ? "flex h-[420px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400 md:col-span-2"
+                      : "flex h-[320px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400"
+                  }
+                >
+                  <p className="text-lg uppercase tracking-widest">{label}</p>
                 </div>
               ))}
             </div>
