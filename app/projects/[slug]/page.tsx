@@ -112,7 +112,6 @@ const projectData = {
           "Final dashboard screen",
           "Simple Mode screen",
           "Environment Optimizer screen",
-          "Troubleshooting flow screen",
         ],
       },
       {
