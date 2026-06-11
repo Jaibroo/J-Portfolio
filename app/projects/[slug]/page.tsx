@@ -152,7 +152,7 @@ const projectData = {
     eyebrow: "Design for America • 2026",
     title: "JIT Website Audit",
     description:
-      "A mobile-first website audit for Just in Time for Foster Youth, focused on helping young adults find resources faster through clearer navigation and more intentional information structure.",
+      "A website audit for Just in Time for Foster Youth, focused on making the site easier to move through for young adults looking for support.",
     image: "/J-Portfolio/jit-website.png",
     role: "Web Designer",
     timeline: "January – March 2026",
@@ -167,10 +167,10 @@ const projectData = {
       {
         id: "challenge",
         eyebrow: "Challenge",
-        title: "Finding help should not require searching through an entire website.",
+        title: "The site had helpful resources, but finding them felt harder than it needed to be.",
         body: [
-          "JIT serves young adults ages 18–27 who may be looking for housing, education, employment, financial support, or other life resources. The issue was not that resources were missing. The issue was that the website made those resources harder to locate than they needed to be.",
-          "On mobile, the experience felt especially heavy: long menus, large images, unclear next steps, and too much scrolling made the site feel more like a list of pages than a guided support system.",
+          "JIT helps young adults ages 18–27 with things like housing, school, jobs, money, and other support. The problem was not that the website had nothing useful. The problem was that the useful stuff was kind of buried.",
+          "On mobile, it felt like users had to scroll, open menus, backtrack, and guess where to go next. For someone who is trying to get help quickly, that is a pretty frustrating place to start.",
         ],
         imageLabel: "Current JIT homepage / mobile menu screenshots",
         imageSrc: "/J-Portfolio/jit2.png",
@@ -178,36 +178,36 @@ const projectData = {
       {
         id: "research",
         eyebrow: "Research",
-        title: "We looked for the moments where users lost direction.",
+        title: "We tried to figure out where people would get stuck first.",
         body: [
-          "Instead of only judging the website visually, we reviewed the mobile experience, collected survey feedback, and compared JIT’s structure against other nonprofit and youth-support websites.",
-          "The strongest pattern was wayfinding. Users needed faster answers to basic questions: Where do I start? Which resource applies to me? What should I click next?",
+          "I looked at the mobile site, survey responses, and other nonprofit websites to see what was working and what felt confusing. I paid the most attention to simple things: Can someone tell where to start? Can they find resources without thinking too hard? Does the menu actually help?",
+          "The biggest issue was direction. The site had a lot of pages, but it did not always make the next step obvious.",
         ],
         cards: [
           {
             title: "Too much scrolling",
-            text: "Users had to move through long pages and menus before reaching important resource pathways.",
+            text: "Important content was there, but users had to keep moving through long pages before getting to it.",
           },
           {
             title: "Unclear first step",
-            text: "The homepage did not immediately guide young adults toward support or eligibility-related actions.",
+            text: "The homepage did not immediately tell young adults where to go if they needed help.",
           },
           {
             title: "Menu overload",
-            text: "The navigation included many options at once, making it harder to quickly choose a direction.",
+            text: "The menu had so many options that it started feeling like another page instead of a shortcut.",
           },
           {
             title: "Mobile friction",
-            text: "Large images, small touch targets, and dense sections made the site feel slower and harder to scan.",
+            text: "Some sections felt heavy on a phone because of large images, dense content, and small details that were easy to miss.",
           },
         ],
       },
       {
         id: "audit",
         eyebrow: "Audit Findings",
-        title: "The main problem was not visual polish. It was navigation pressure.",
+        title: "A lot of the issues came down to the site feeling busy at the wrong moments.",
         body: [
-          "The audit helped me separate surface-level design issues from problems that directly affected users trying to find help. A color or layout issue mattered less than whether a young adult could quickly understand where to go next.",
+          "When I was marking up the site, I noticed that some problems were visual, but most of the bigger problems were about order and clarity. The site had pieces that worked, but they were not always placed where a young adult would expect them.",
         ],
         splitImages: [
           {
@@ -223,44 +223,45 @@ const projectData = {
       {
         id: "prioritization",
         eyebrow: "Prioritization",
-        title: "Not every issue needed the same level of attention.",
+        title: "I had to stop treating every issue like it was equally important.",
         body: [
-          "This project pushed me to prioritize. Instead of treating every critique as equal, I focused on the problems most likely to block resource discovery: navigation, mobile scanning, and unclear pathways to support.",
+          "At first, it was easy to point out everything that looked off: the menu, the footer, the images, the colors, the section order, and the amount of text. But that list was way too broad.",
+          "The stronger direction was to focus on the things that would actually help someone find support faster: clearer page flow, cleaner navigation, and better organization.",
         ],
         comparison: {
           beforeTitle: "Before",
           beforeText:
-            "A broad list of website issues: layout, menu length, imagery, footer design, contrast, and page organization.",
+            "A long list of problems that included layout, menu length, image sizing, footer spacing, contrast, and page order.",
           beforeImage: "/J-Portfolio/jit3.png",
           afterTitle: "After",
           afterText:
-            "A focused set of recommendations centered on resource discovery, mobile navigation, and clearer next steps.",
+            "A smaller set of priorities focused on what users would need first: where to start, where to click, and how to find resources.",
           afterImage: "/J-Portfolio/jit5.png",
           reason:
-            "I made this shift because a real client project needs prioritization. The most important recommendations were the ones that helped young adults find support faster, not just the ones that made the site look cleaner.",
+            "I made this change because a big list of complaints is not that useful. The recommendations needed to point toward what should actually be fixed first, especially for users coming to the site for help.",
         },
       },
       {
         id: "recommendations",
-        eyebrow: "Design Recommendations",
-        title: "The recommendations focused on helping users choose a path faster.",
+        eyebrow: "Design Process",
+        title: "Before jumping into screens, we needed a cleaner plan for the site.",
         body: [
-          "Each recommendation connected back to a specific user problem from the audit. The goal was to make the site feel less overwhelming and more action-oriented.",
+          "This part became less about making random screen changes and more about building the pieces we needed before designing. We needed to understand the structure, agree on the visual rules, and then use that to make low-fidelity screens that actually followed the same logic.",
         ],
         featureImages: [
           {
-            title: "Simplify the mobile menu",
-            text: "Reduce long scrolling by grouping pages into clearer categories and making resource-related actions easier to spot.",
+            title: "Information Architecture",
+            text: "Before making screens, we mapped out how the site should flow. This helped us understand what pages mattered most, how sections should connect, and what path a young adult would probably need to follow first.",
             src: "/J-Portfolio/jit7.png",
           },
           {
-            title: "Move resources forward",
-            text: "Prioritize resource discovery earlier on the homepage so young adults do not have to search through donor or organization-focused content first.",
+            title: "Design System",
+            text: "Since multiple people were working on the project, we needed one place for our design choices. The design system helped keep buttons, colors, spacing, and content styles consistent instead of having every screen feel like a separate idea.",
             src: "/J-Portfolio/jit8.png",
           },
           {
-            title: "Clarify calls to action",
-            text: "Use direct labels that explain what users can do next, such as finding support, checking eligibility, or joining the JIT network.",
+            title: "Low-Fidelity Screens",
+            text: "After the audit, information architecture, and design system, we started turning everything into low-fidelity screens. These helped us test the layout and flow before worrying too much about final visuals.",
             src: "/J-Portfolio/jit9.png",
           },
         ],
@@ -268,9 +269,9 @@ const projectData = {
       {
         id: "solution",
         eyebrow: "Final Direction",
-        title: "A clearer website structure for users who need support quickly.",
+        title: "The final direction made the site feel easier to follow.",
         body: [
-          "The final direction centered on shorter paths, clearer labels, better mobile scanning, and a stronger separation between youth resources, donor content, and general organization information.",
+          "The final direction focused on making the site less overwhelming. The goal was to help users understand what JIT offers, find the right resource area, and move through the site without feeling like they had to dig for everything.",
         ],
         galleryImages: [
           {
@@ -290,11 +291,11 @@ const projectData = {
       {
         id: "reflection",
         eyebrow: "Reflection",
-        title: "JIT shows how my process became more evidence-driven.",
+        title: "This project made me think more carefully about what should stay, move, or be removed.",
         body: [
-          "Compared to Lumen, this project felt less like designing a new product from scratch and more like diagnosing where an existing experience was breaking down. That pushed me to think beyond screens and focus on navigation, hierarchy, and stakeholder priorities.",
-          "I became more careful about explaining why something should change. Instead of saying a section looked cluttered, I had to connect that clutter to user behavior: too much scrolling, unclear first steps, and difficulty finding resources.",
-          "This project shows growth from feature-focused design toward strategic design. I was not just asking what could be added. I was asking what should be simplified, moved, renamed, or removed so users could reach support with less friction.",
+          "JIT felt different from Lumen because I was not starting from a blank page. I had to work with a real website that already had content, goals, and a lot of moving parts.",
+          "I learned that a redesign is not always about adding new sections. A lot of the work was deciding what needed to be simplified, what needed to move up, and what was making the site harder to use.",
+          "This project helped me get better at explaining my choices. Instead of just saying something looked cluttered, I had to point to the actual issue: too much scrolling, unclear labels, or a menu that made users work too hard.",
         ],
       },
     ],
