@@ -173,6 +173,7 @@ const projectData = {
           "On mobile, the experience felt especially heavy: long menus, large images, unclear next steps, and too much scrolling made the site feel more like a list of pages than a guided support system.",
         ],
         imageLabel: "Current JIT homepage / mobile menu screenshots",
+        imageSrc: "/J-Portfolio/jit2.png",
       },
       {
         id: "research",
@@ -209,8 +210,14 @@ const projectData = {
           "The audit helped me separate surface-level design issues from problems that directly affected users trying to find help. A color or layout issue mattered less than whether a young adult could quickly understand where to go next.",
         ],
         splitImages: [
-          { label: "Annotated homepage issues" },
-          { label: "Annotated navigation / menu issues" },
+          {
+            label: "Annotated homepage issues",
+            src: "/J-Portfolio/jit6.png",
+          },
+          {
+            label: "Annotated navigation / menu issues",
+            src: "/J-Portfolio/jit4.png",
+          },
         ],
       },
       {
@@ -224,9 +231,11 @@ const projectData = {
           beforeTitle: "Before",
           beforeText:
             "A broad list of website issues: layout, menu length, imagery, footer design, contrast, and page organization.",
+          beforeImage: "/J-Portfolio/jit3.png",
           afterTitle: "After",
           afterText:
             "A focused set of recommendations centered on resource discovery, mobile navigation, and clearer next steps.",
+          afterImage: "/J-Portfolio/jit5.png",
           reason:
             "I made this shift because a real client project needs prioritization. The most important recommendations were the ones that helped young adults find support faster, not just the ones that made the site look cleaner.",
         },
@@ -242,14 +251,17 @@ const projectData = {
           {
             title: "Simplify the mobile menu",
             text: "Reduce long scrolling by grouping pages into clearer categories and making resource-related actions easier to spot.",
+            src: "/J-Portfolio/jit7.png",
           },
           {
             title: "Move resources forward",
             text: "Prioritize resource discovery earlier on the homepage so young adults do not have to search through donor or organization-focused content first.",
+            src: "/J-Portfolio/jit8.png",
           },
           {
             title: "Clarify calls to action",
             text: "Use direct labels that explain what users can do next, such as finding support, checking eligibility, or joining the JIT network.",
+            src: "/J-Portfolio/jit9.png",
           },
         ],
       },
@@ -261,10 +273,18 @@ const projectData = {
           "The final direction centered on shorter paths, clearer labels, better mobile scanning, and a stronger separation between youth resources, donor content, and general organization information.",
         ],
         galleryImages: [
-          "Proposed homepage structure",
-          "Simplified mobile menu",
-          "Resource card layout",
-          "Implementation priority plan",
+          {
+            label: "Proposed homepage structure",
+            src: "/J-Portfolio/jit10.png",
+          },
+          {
+            label: "Simplified mobile menu",
+            src: "/J-Portfolio/jit11.png",
+          },
+          {
+            label: "Resource card layout",
+            src: "/J-Portfolio/jit12.png",
+          },
         ],
       },
       {
