@@ -323,20 +323,74 @@ export default async function ProjectPage({
   if (!project) {
     return (
       <main className="min-h-screen bg-slate-900 p-10 font-[Calluna,Georgia,serif] text-white">
-        <h1 className="text-3xl font-bold">Project not found</h1>
+        <nav className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border-b border-slate-700 bg-slate-950/90 px-10 py-5 backdrop-blur font-[Calluna,Georgia,serif]">
+          <Link href="/" className="text-xl font-bold text-slate-50">
+            Jairo Martinez Arenal
+          </Link>
 
-        <Link className="mt-6 inline-block underline" href="/">
-          Back to Portfolio
-        </Link>
+          <div className="flex gap-6 text-slate-300">
+            <Link href="/#projects" className="hover:text-sky-300">
+              Projects
+            </Link>
+            <Link href="/#reflection" className="hover:text-sky-300">
+              Reflection
+            </Link>
+            <Link href="/#footer" className="hover:text-sky-300">
+              Contact
+            </Link>
+            <a
+              href="/J-Portfolio/JairoR.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-sky-300"
+            >
+              Resume
+            </a>
+          </div>
+        </nav>
+
+        <section className="pt-24">
+          <h1 className="text-3xl font-bold">Project not found</h1>
+
+          <Link className="mt-6 inline-block underline" href="/">
+            Back to Portfolio
+          </Link>
+        </section>
       </main>
     );
   }
 
   return (
     <main className="min-h-screen bg-slate-900 px-10 py-16 font-[Calluna,Georgia,serif] text-white">
-      <aside className="fixed left-10 top-28 hidden text-slate-400 lg:block">
+      <nav className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border-b border-slate-700 bg-slate-950/90 px-10 py-5 backdrop-blur font-[Calluna,Georgia,serif]">
+        <Link href="/" className="text-xl font-bold text-slate-50">
+          Jairo Martinez Arenal
+        </Link>
+
+        <div className="flex gap-6 text-slate-300">
+          <Link href="/#projects" className="hover:text-sky-300">
+            Projects
+          </Link>
+          <Link href="/#reflection" className="hover:text-sky-300">
+            Reflection
+          </Link>
+          <Link href="/#footer" className="hover:text-sky-300">
+            Contact
+          </Link>
+          <a
+            href="/J-Portfolio/JairoR.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-sky-300"
+          >
+            Resume
+          </a>
+        </div>
+      </nav>
+
+      <aside className="fixed left-10 top-32 hidden text-slate-400 lg:block">
         <Link href="/" className="hover:text-sky-300">
-          ← Back
+          ← Home
         </Link>
 
         <nav className="mt-12 flex flex-col gap-4 text-sm">
@@ -358,7 +412,7 @@ export default async function ProjectPage({
 
       <section
         id="overview"
-        className="mx-auto max-w-5xl border-b border-slate-700 pb-12"
+        className="mx-auto mt-20 max-w-5xl border-b border-slate-700 pb-12"
       >
         <p className="text-sm uppercase tracking-widest text-slate-400">
           {project.eyebrow}
