@@ -68,20 +68,20 @@ export default function Home() {
       {/* 1. INTRO */}
       <section className="fade-in flex min-h-[50vh] flex-col justify-start border-b border-slate-700 pt-24 pb-12">
         <div className="max-w-6xl">
-          <p className="text-5xl font-bold text-slate-200 md:text-6xl">
+          <p className="text-4xl font-bold text-slate-200 md:text-5xl">
             Jairo Martinez Arenal
           </p>
 
-          <h1 className="mt-5 text-6xl font-bold tracking-tight text-sky-300 md:text-8xl">
+          <h1 className="mt-5 text-5xl font-bold tracking-tight text-sky-300 md:text-7xl">
             UX/UI Designer
           </h1>
 
           <p className="mt-6 max-w-5xl text-xl leading-8 text-slate-300">
-            I design accessible, human-centered digital experiences with a
-            growing focus on front-end development and product thinking. This
-            summer, I plan to continue sharpening my design process through
-            Design Co&apos;s Up-Grade Program by working on real-world product
-            challenges guided by industry professionals.
+            I care about designing digital experiences that make people feel
+            less lost and more in control. I&apos;m growing at the intersection
+            of UX, front-end development, and product thinking, and this summer
+            I&apos;ll be joining Design Co&apos;s Up-Grade Program to take on
+            real-world product challenges with industry guidance.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
