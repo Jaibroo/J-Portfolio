@@ -161,95 +161,96 @@ export default function Home() {
           </p>
 
           <h2 className="mt-4 max-w-4xl text-5xl font-bold leading-tight text-slate-50">
-            How my design process changed this quarter
+            What I learned about design this quarter
           </h2>
 
+          <p className="mt-6 max-w-5xl text-xl leading-8 text-slate-300">
+            This quarter honestly changed how I look at design. At first, I was
+            mainly thinking about making screens and adding useful features. But
+            after working on Lumen and JIT, I started realizing that design is
+            more about making choices that actually help people, not just adding
+            more stuff to a page.
+          </p>
+
           <div className="mt-10 grid gap-5 md:grid-cols-2">
-            <div className="border border-slate-700 bg-slate-800/60 p-6">
+            <div className="border border-slate-700 bg-slate-800/60 p-7">
               <p className="text-sm uppercase tracking-widest text-slate-500">
                 Earlier: Lumen
               </p>
 
               <h3 className="mt-4 text-2xl font-bold text-slate-50">
-                I started by thinking in screens and features.
+                I was still learning how to connect features to real problems.
               </h3>
 
               <p className="mt-4 text-lg leading-7 text-slate-300">
-                On Lumen, I focused on what the app could include: audio
-                controls, modes, troubleshooting, and customization. That helped
-                me learn product structure, but I was still learning how to
-                connect each design choice back to a user problem.
+                With Lumen, I was excited about all the things the app could
+                have, like audio controls, modes, troubleshooting, and different
+                settings. That project helped me understand how an app could be
+                structured, but I was still learning how to explain why each
+                choice mattered for the user.
               </p>
             </div>
 
-            <div className="border border-sky-400 bg-slate-800/60 p-6">
+            <div className="border border-sky-400 bg-slate-800/60 p-7">
               <p className="text-sm uppercase tracking-widest text-sky-300">
                 Later: JIT
               </p>
 
               <h3 className="mt-4 text-2xl font-bold text-slate-50">
-                I became more focused on evidence and prioritization.
+                I got better at noticing what needed to be cleaned up.
               </h3>
 
               <p className="mt-4 text-lg leading-7 text-slate-300">
-                With JIT, I had to look at an existing website, user feedback,
-                mobile friction, and stakeholder goals. Instead of asking what
-                could be added, I started asking what needed to be simplified,
-                moved, renamed, or removed.
+                JIT felt different because it was not about creating something
+                from zero. It was more about looking at a real website and
+                figuring out why it felt confusing. I had to think more about
+                scrolling, menus, wording, and what users would actually need
+                first.
               </p>
             </div>
           </div>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            <div className="border border-slate-700 bg-slate-900/60 p-6">
-              <h3 className="text-2xl font-bold text-slate-50">
-                Accessibility became broader.
-              </h3>
-              <p className="mt-4 text-lg leading-7 text-slate-300">
-                I used to think about accessibility mostly through visual design:
-                larger buttons, clearer spacing, and readable text. Now I also
-                think about language, navigation, support flows, and whether
-                users feel confident when something goes wrong.
-              </p>
-            </div>
+          <div className="mt-10 border border-slate-700 bg-slate-900/70 p-7">
+            <h3 className="text-3xl font-bold text-slate-50">
+              The biggest thing I learned
+            </h3>
 
-            <div className="border border-slate-700 bg-slate-900/60 p-6">
-              <h3 className="text-2xl font-bold text-slate-50">
-                My rationale became stronger.
-              </h3>
-              <p className="mt-4 text-lg leading-7 text-slate-300">
-                I became more careful about explaining why a design should
-                change. A recommendation is stronger when it connects back to
-                research, user behavior, or a specific point of friction instead
-                of personal preference.
+            <div className="mt-5 grid gap-6 md:grid-cols-3">
+              <p className="text-lg leading-7 text-slate-300">
+                I learned that accessibility is not only about making things
+                bigger or easier to see. It is also about clear wording, simple
+                navigation, and helping users know what to do when something
+                goes wrong.
               </p>
-            </div>
 
-            <div className="border border-slate-700 bg-slate-900/60 p-6">
-              <h3 className="text-2xl font-bold text-slate-50">
-                I learned to design less, more intentionally.
-              </h3>
-              <p className="mt-4 text-lg leading-7 text-slate-300">
-                My strongest improvements came from reducing confusion rather
-                than adding more. This quarter helped me see that good design is
-                often about helping users reach the right action with less
-                effort.
+              <p className="text-lg leading-7 text-slate-300">
+                I also got better at giving reasons for my design choices.
+                Instead of just saying something looks better, I tried to connect
+                changes back to feedback, user confusion, or a real problem in
+                the experience.
+              </p>
+
+              <p className="text-lg leading-7 text-slate-300">
+                Most importantly, I learned that sometimes better design means
+                removing things. A cleaner menu or a clearer first step can be
+                more helpful than adding another button or section.
               </p>
             </div>
           </div>
 
-          <div className="mt-10 border-l-4 border-sky-300 bg-slate-800/60 p-6">
+          <div className="mt-10 border-l-4 border-sky-300 bg-slate-800/60 p-7">
             <p className="text-sm uppercase tracking-widest text-sky-300">
               Self Assessment
             </p>
 
             <p className="mt-4 max-w-5xl text-xl leading-8 text-slate-200">
-              I still want to improve my visual polish and prototyping speed,
-              but I can see a real shift in how I approach design. I moved from
-              making screens that looked useful to making decisions that are
-              easier to defend. Lumen taught me to pay attention to user needs.
-              JIT taught me to prioritize those needs inside a real website with
-              real constraints.
+              I still want to get faster at prototyping and improve the visual
+              polish of my work, but I do feel like I grew a lot this quarter.
+              I went from thinking mostly about what I could design to thinking
+              more about what users actually need. Lumen helped me practice
+              building an app idea, and JIT helped me understand how to make a
+              real website feel less overwhelming. I am still learning, but I
+              feel way more confident explaining my choices now.
             </p>
           </div>
         </div>
