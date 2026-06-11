@@ -7,7 +7,7 @@ const projectData = {
     title: "Lumen — Hearing Aid App",
     description:
       "A hearing aid companion app for users who need clearer controls, easier troubleshooting, and less stressful ways to manage their hearing aids day to day.",
-    image: "/J-Portfolio/hearing-aid.png",
+    image: "/J-Portfolio/Lumen1.png",
     role: "UX Designer",
     timeline: "June – September 2025",
     team: "4 Designers, 1 Project Manager",
@@ -22,6 +22,7 @@ const projectData = {
           "Common issues included unreliable Bluetooth pairing, small buttons, cluttered menus, unclear instructions, and support options that were difficult to find.",
         ],
         imageLabel: "Existing app issues / competitor screenshots",
+        imageSrc: "/J-Portfolio/lumen2.png",
       },
       {
         id: "research",
@@ -57,8 +58,14 @@ const projectData = {
           "Our early direction leaned toward adding more controls, more customization, and more ways to adjust sound. That seemed helpful at first, but it also risked making the app harder to scan and harder to trust.",
         ],
         splitImages: [
-          { label: "Early dashboard sketch / wireframe" },
-          { label: "Early audio controls / feature ideas" },
+          {
+            label: "Early dashboard sketch / wireframe",
+            src: "/J-Portfolio/lumen3.png",
+          },
+          {
+            label: "Early audio controls / feature ideas",
+            src: "/J-Portfolio/lumen4.png",
+          },
         ],
       },
       {
@@ -72,9 +79,11 @@ const projectData = {
           beforeTitle: "Before",
           beforeText:
             "One general interface with too many settings competing for attention.",
+          beforeImage: "/J-Portfolio/lumen5.png",
           afterTitle: "After",
           afterText:
             "A dual-mode structure: Simple Mode for quick changes and Tech Mode for deeper control.",
+          afterImage: "/J-Portfolio/lumen6.png",
           reason:
             "We made this change because more functionality did not automatically mean more usability. The interface needed to match different levels of comfort instead of forcing every user through the same flow.",
         },
@@ -90,14 +99,17 @@ const projectData = {
           {
             title: "Simple Mode",
             text: "Created for users who need quick changes, larger touch targets, and plain language controls.",
+            src: "/J-Portfolio/lumen7.png",
           },
           {
             title: "Guided Troubleshooting",
             text: "Added because users often did not know where a connection issue was coming from.",
+            src: "/J-Portfolio/lumen8.png",
           },
           {
             title: "Environment Optimizer",
             text: "Added because users think in situations like restaurants, TV, and phone calls — not audio engineering terms.",
+            src: "/J-Portfolio/lumen9.png",
           },
         ],
       },
@@ -109,9 +121,18 @@ const projectData = {
           "The final direction centered on daily use: quick sound adjustments, clearer connection status, environment-based settings, and guided troubleshooting.",
         ],
         galleryImages: [
-          "Final dashboard screen",
-          "Simple Mode screen",
-          "Environment Optimizer screen",
+          {
+            label: "Final dashboard screen",
+            src: "/J-Portfolio/lumen11.png",
+          },
+          {
+            label: "Simple Mode screen",
+            src: "/J-Portfolio/lumen12.png",
+          },
+          {
+            label: "Environment Optimizer screen",
+            src: "/J-Portfolio/lumen14.png",
+          },
         ],
       },
       {
@@ -412,10 +433,22 @@ export default async function ProjectPage({
           </div>
 
           {"imageLabel" in section && section.imageLabel && (
-            <div className="mt-10 flex h-[340px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">
-              <p className="text-lg uppercase tracking-widest">
-                {section.imageLabel}
-              </p>
+            <div className="mt-10 h-[340px] overflow-hidden border border-slate-700 bg-slate-800">
+              {"imageSrc" in section && section.imageSrc ? (
+                <Image
+                  src={section.imageSrc}
+                  alt={section.imageLabel}
+                  width={1400}
+                  height={900}
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <div className="flex h-full items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">
+                  <p className="text-lg uppercase tracking-widest">
+                    {section.imageLabel}
+                  </p>
+                </div>
+              )}
             </div>
           )}
 
@@ -443,11 +476,23 @@ export default async function ProjectPage({
               {section.splitImages.map((item) => (
                 <div
                   key={item.label}
-                  className="flex h-[360px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400"
+                  className="h-[360px] overflow-hidden border border-slate-700 bg-slate-800"
                 >
-                  <p className="text-lg uppercase tracking-widest">
-                    {item.label}
-                  </p>
+                  {"src" in item && item.src ? (
+                    <Image
+                      src={item.src}
+                      alt={item.label}
+                      width={1000}
+                      height={800}
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <div className="flex h-full items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">
+                      <p className="text-lg uppercase tracking-widest">
+                        {item.label}
+                      </p>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -461,10 +506,23 @@ export default async function ProjectPage({
                     {section.comparison.beforeTitle}
                   </p>
 
-                  <div className="mt-5 flex h-[280px] items-center justify-center border border-dashed border-slate-600 bg-slate-900/70 text-center text-slate-400">
-                    <p className="uppercase tracking-widest">
-                      Before Image Placeholder
-                    </p>
+                  <div className="mt-5 h-[280px] overflow-hidden border border-slate-700 bg-slate-900/70">
+                    {"beforeImage" in section.comparison &&
+                    section.comparison.beforeImage ? (
+                      <Image
+                        src={section.comparison.beforeImage}
+                        alt="Before design"
+                        width={1000}
+                        height={700}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center border border-dashed border-slate-600 text-center text-slate-400">
+                        <p className="uppercase tracking-widest">
+                          Before Image Placeholder
+                        </p>
+                      </div>
+                    )}
                   </div>
 
                   <p className="mt-5 text-lg leading-7 text-slate-300">
@@ -477,10 +535,23 @@ export default async function ProjectPage({
                     {section.comparison.afterTitle}
                   </p>
 
-                  <div className="mt-5 flex h-[280px] items-center justify-center border border-dashed border-sky-500 bg-slate-900/70 text-center text-sky-300">
-                    <p className="uppercase tracking-widest">
-                      After Image Placeholder
-                    </p>
+                  <div className="mt-5 h-[280px] overflow-hidden border border-sky-500 bg-slate-900/70">
+                    {"afterImage" in section.comparison &&
+                    section.comparison.afterImage ? (
+                      <Image
+                        src={section.comparison.afterImage}
+                        alt="After design"
+                        width={1000}
+                        height={700}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center border border-dashed border-sky-500 text-center text-sky-300">
+                        <p className="uppercase tracking-widest">
+                          After Image Placeholder
+                        </p>
+                      </div>
+                    )}
                   </div>
 
                   <p className="mt-5 text-lg leading-7 text-slate-300">
@@ -515,13 +586,25 @@ export default async function ProjectPage({
                   <div
                     className={
                       index % 2 === 0
-                        ? "flex h-[400px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400"
-                        : "flex h-[400px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400 md:order-2"
+                        ? "h-[400px] overflow-hidden border border-slate-700 bg-slate-800"
+                        : "h-[400px] overflow-hidden border border-slate-700 bg-slate-800 md:order-2"
                     }
                   >
-                    <p className="text-lg uppercase tracking-widest">
-                      Image Placeholder {index + 1}
-                    </p>
+                    {"src" in item && item.src ? (
+                      <Image
+                        src={item.src}
+                        alt={item.title}
+                        width={1000}
+                        height={900}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">
+                        <p className="text-lg uppercase tracking-widest">
+                          Image Placeholder {index + 1}
+                        </p>
+                      </div>
+                    )}
                   </div>
 
                   <div>
@@ -540,18 +623,37 @@ export default async function ProjectPage({
 
           {"galleryImages" in section && section.galleryImages && (
             <div className="mt-10 grid gap-5 md:grid-cols-2">
-              {section.galleryImages.map((label, index) => (
-                <div
-                  key={label}
-                  className={
-                    index === 0
-                      ? "flex h-[420px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400 md:col-span-2"
-                      : "flex h-[320px] items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400"
-                  }
-                >
-                  <p className="text-lg uppercase tracking-widest">{label}</p>
-                </div>
-              ))}
+              {section.galleryImages.map((item, index) => {
+                const label = typeof item === "string" ? item : item.label;
+                const src = typeof item === "string" ? null : item.src;
+
+                return (
+                  <div
+                    key={label}
+                    className={
+                      index === 0
+                        ? "h-[420px] overflow-hidden border border-slate-700 bg-slate-800 md:col-span-2"
+                        : "h-[320px] overflow-hidden border border-slate-700 bg-slate-800"
+                    }
+                  >
+                    {src ? (
+                      <Image
+                        src={src}
+                        alt={label}
+                        width={1400}
+                        height={900}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">
+                        <p className="text-lg uppercase tracking-widest">
+                          {label}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           )}
         </section>
