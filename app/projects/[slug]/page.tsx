@@ -57,12 +57,8 @@ const projectData = {
           "Our early direction leaned toward adding more controls, more customization, and more ways to adjust sound. That seemed helpful at first, but it also risked making the app harder to scan and harder to trust.",
         ],
         splitImages: [
-          {
-            label: "Early dashboard sketch / wireframe",
-          },
-          {
-            label: "Early audio controls / feature ideas",
-          },
+          { label: "Early dashboard sketch / wireframe" },
+          { label: "Early audio controls / feature ideas" },
         ],
       },
       {
@@ -136,19 +132,129 @@ const projectData = {
     eyebrow: "Design for America • 2026",
     title: "JIT Website Audit",
     description:
-      "A website audit focused on helping young adults find youth resources more easily through clearer navigation and mobile-first recommendations.",
+      "A mobile-first website audit for Just in Time for Foster Youth, focused on helping young adults find resources faster through clearer navigation and more intentional information structure.",
     image: "/J-Portfolio/jit-website.png",
     role: "Web Designer",
     timeline: "January – March 2026",
     team: "Design for America UCSD",
-    skills: ["Website Audit", "UX Research", "Accessibility", "Mobile Design"],
+    skills: [
+      "Website Audit",
+      "UX Research",
+      "Information Architecture",
+      "Mobile Accessibility",
+    ],
     sections: [
+      {
+        id: "challenge",
+        eyebrow: "Challenge",
+        title: "Finding help should not require searching through an entire website.",
+        body: [
+          "JIT serves young adults ages 18–27 who may be looking for housing, education, employment, financial support, or other life resources. The issue was not that resources were missing. The issue was that the website made those resources harder to locate than they needed to be.",
+          "On mobile, the experience felt especially heavy: long menus, large images, unclear next steps, and too much scrolling made the site feel more like a list of pages than a guided support system.",
+        ],
+        imageLabel: "Current JIT homepage / mobile menu screenshots",
+      },
+      {
+        id: "research",
+        eyebrow: "Research",
+        title: "We looked for the moments where users lost direction.",
+        body: [
+          "Instead of only judging the website visually, we reviewed the mobile experience, collected survey feedback, and compared JIT’s structure against other nonprofit and youth-support websites.",
+          "The strongest pattern was wayfinding. Users needed faster answers to basic questions: Where do I start? Which resource applies to me? What should I click next?",
+        ],
+        cards: [
+          {
+            title: "Too much scrolling",
+            text: "Users had to move through long pages and menus before reaching important resource pathways.",
+          },
+          {
+            title: "Unclear first step",
+            text: "The homepage did not immediately guide young adults toward support or eligibility-related actions.",
+          },
+          {
+            title: "Menu overload",
+            text: "The navigation included many options at once, making it harder to quickly choose a direction.",
+          },
+          {
+            title: "Mobile friction",
+            text: "Large images, small touch targets, and dense sections made the site feel slower and harder to scan.",
+          },
+        ],
+      },
+      {
+        id: "audit",
+        eyebrow: "Audit Findings",
+        title: "The main problem was not visual polish. It was navigation pressure.",
+        body: [
+          "The audit helped me separate surface-level design issues from problems that directly affected users trying to find help. A color or layout issue mattered less than whether a young adult could quickly understand where to go next.",
+        ],
+        splitImages: [
+          { label: "Annotated homepage issues" },
+          { label: "Annotated navigation / menu issues" },
+        ],
+      },
+      {
+        id: "prioritization",
+        eyebrow: "Prioritization",
+        title: "Not every issue needed the same level of attention.",
+        body: [
+          "This project pushed me to prioritize. Instead of treating every critique as equal, I focused on the problems most likely to block resource discovery: navigation, mobile scanning, and unclear pathways to support.",
+        ],
+        comparison: {
+          beforeTitle: "Before",
+          beforeText:
+            "A broad list of website issues: layout, menu length, imagery, footer design, contrast, and page organization.",
+          afterTitle: "After",
+          afterText:
+            "A focused set of recommendations centered on resource discovery, mobile navigation, and clearer next steps.",
+          reason:
+            "I made this shift because a real client project needs prioritization. The most important recommendations were the ones that helped young adults find support faster, not just the ones that made the site look cleaner.",
+        },
+      },
+      {
+        id: "recommendations",
+        eyebrow: "Design Recommendations",
+        title: "The recommendations focused on helping users choose a path faster.",
+        body: [
+          "Each recommendation connected back to a specific user problem from the audit. The goal was to make the site feel less overwhelming and more action-oriented.",
+        ],
+        featureImages: [
+          {
+            title: "Simplify the mobile menu",
+            text: "Reduce long scrolling by grouping pages into clearer categories and making resource-related actions easier to spot.",
+          },
+          {
+            title: "Move resources forward",
+            text: "Prioritize resource discovery earlier on the homepage so young adults do not have to search through donor or organization-focused content first.",
+          },
+          {
+            title: "Clarify calls to action",
+            text: "Use direct labels that explain what users can do next, such as finding support, checking eligibility, or joining the JIT network.",
+          },
+        ],
+      },
+      {
+        id: "solution",
+        eyebrow: "Final Direction",
+        title: "A clearer website structure for users who need support quickly.",
+        body: [
+          "The final direction centered on shorter paths, clearer labels, better mobile scanning, and a stronger separation between youth resources, donor content, and general organization information.",
+        ],
+        galleryImages: [
+          "Proposed homepage structure",
+          "Simplified mobile menu",
+          "Resource card layout",
+          "Implementation priority plan",
+        ],
+      },
       {
         id: "reflection",
         eyebrow: "Reflection",
-        title: "What this project helped me practice.",
+        title: "JIT shows how my process became more evidence-driven.",
         body: [
-          "Compared to Lumen, this project pushed me to think more strategically about navigation, stakeholder goals, and how users find support under pressure.",
+          "Compared to Lumen, this project felt less like designing a new product from scratch and more like diagnosing where an existing experience was breaking down. That pushed me to think beyond screens and focus on navigation, hierarchy, and stakeholder priorities.",
+          "I became more careful about explaining why something should change. Instead of saying a section looked cluttered, I had to connect that clutter to user behavior: too much scrolling, unclear first steps, and difficulty finding resources.",
+          "This project shows growth from feature-focused design toward strategic design. I was not just asking what could be added. I was asking what should be simplified, moved, renamed, or removed so users could reach support with less friction.",
         ],
       },
     ],
@@ -174,8 +280,8 @@ export default async function ProjectPage({
       <main className="min-h-screen bg-slate-900 p-10 font-[Calluna,Georgia,serif] text-white">
         <h1 className="text-3xl font-bold">Project not found</h1>
 
-        <Link className="mt-6 inline-block underline" href="/projects">
-          Back to Projects
+        <Link className="mt-6 inline-block underline" href="/">
+          Back to Portfolio
         </Link>
       </main>
     );
@@ -184,7 +290,7 @@ export default async function ProjectPage({
   return (
     <main className="min-h-screen bg-slate-900 px-10 py-16 font-[Calluna,Georgia,serif] text-white">
       <aside className="fixed left-10 top-28 hidden text-slate-400 lg:block">
-        <Link href="/J-Portfolio/" className="hover:text-sky-300">
+        <Link href="/" className="hover:text-sky-300">
           ← Back
         </Link>
 
