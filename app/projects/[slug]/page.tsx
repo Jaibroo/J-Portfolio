@@ -354,7 +354,7 @@ export default async function ProjectPage({
               alt={project.title}
               width={1400}
               height={900}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
             />
           </div>
         )}
@@ -440,7 +440,7 @@ export default async function ProjectPage({
                   alt={section.imageLabel}
                   width={1400}
                   height={900}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-contain"
                 />
               ) : (
                 <div className="flex h-full items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">
@@ -484,7 +484,7 @@ export default async function ProjectPage({
                       alt={item.label}
                       width={1000}
                       height={800}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain"
                     />
                   ) : (
                     <div className="flex h-full items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">
@@ -514,7 +514,7 @@ export default async function ProjectPage({
                         alt="Before design"
                         width={1000}
                         height={700}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-contain"
                       />
                     ) : (
                       <div className="flex h-full items-center justify-center border border-dashed border-slate-600 text-center text-slate-400">
@@ -543,7 +543,7 @@ export default async function ProjectPage({
                         alt="After design"
                         width={1000}
                         height={700}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-contain"
                       />
                     ) : (
                       <div className="flex h-full items-center justify-center border border-dashed border-sky-500 text-center text-sky-300">
@@ -596,7 +596,7 @@ export default async function ProjectPage({
                         alt={item.title}
                         width={1000}
                         height={900}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-contain"
                       />
                     ) : (
                       <div className="flex h-full items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">
@@ -642,7 +642,7 @@ export default async function ProjectPage({
                         alt={label}
                         width={1400}
                         height={900}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-contain"
                       />
                     ) : (
                       <div className="flex h-full items-center justify-center border border-dashed border-slate-600 bg-slate-800/50 text-center text-slate-400">

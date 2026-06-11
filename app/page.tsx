@@ -124,7 +124,7 @@ export default function Home() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
