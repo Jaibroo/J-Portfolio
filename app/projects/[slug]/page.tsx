@@ -6,7 +6,7 @@ const projectData = {
     eyebrow: "ACM Summer Projects • 2025",
     title: "Lumen — Hearing Aid App",
     description:
-      "A hearing aid companion app for users who need clearer controls, easier troubleshooting, and less stressful ways to manage their hearing aids day to day.",
+      "A hearing aid app concept made for people who need quick controls, clear help, and less confusion when their hearing aids are not doing what they need.",
     image: "/J-Portfolio/Lumen1.png",
     role: "UX Designer",
     timeline: "June – September 2025",
@@ -16,10 +16,10 @@ const projectData = {
       {
         id: "problem",
         eyebrow: "Problem",
-        title: "Hearing aid apps often make simple tasks feel harder than they should.",
+        title: "The app should help users feel calm, not make them dig around.",
         body: [
-          "Our starting point was a clear pattern: users were not struggling because they lacked motivation. They were struggling because the apps asked too much of them at the wrong moments.",
-          "Common issues included unreliable Bluetooth pairing, small buttons, cluttered menus, unclear instructions, and support options that were difficult to find.",
+          "For this project, the main issue was pretty simple: hearing aid apps have a lot of important controls, but they can feel annoying to use when someone just wants to fix sound, reconnect, or change a setting fast.",
+          "A lot of the problems we looked at were things like confusing menus, Bluetooth issues, tiny buttons, unclear labels, and help sections that felt hidden. If a user is already stressed because they cannot hear well, the app should not add more stress.",
         ],
         imageLabel: "Existing app issues / competitor screenshots",
         imageSrc: "/J-Portfolio/lumen2.png",
@@ -27,35 +27,37 @@ const projectData = {
       {
         id: "research",
         eyebrow: "Research",
-        title: "We focused on where users felt stuck, not just what features existed.",
+        title: "We looked for the moments where users would probably give up.",
         body: [
-          "We reviewed hearing aid companion apps and user feedback from products like Oticon, MyPhonak, Cochlear, ReSound, and Widex. The main pattern was not that users wanted a more advanced app. They wanted the app to feel dependable when they needed it.",
+          "We looked at hearing aid apps like Oticon, MyPhonak, Cochlear, ReSound, and Widex. I was not just looking at what features they had. I was looking at where the experience started to feel confusing or too technical.",
+          "The biggest pattern was that users did not need the app to feel fancy. They needed it to be clear when something was connected, easy to adjust in the moment, and helpful when something went wrong.",
         ],
         cards: [
           {
             title: "Connection issues",
-            text: "Users often did not know whether the hearing aid, phone, Bluetooth, or app was causing the problem.",
+            text: "If Bluetooth stopped working, users could be left guessing if the problem was the phone, the app, or the hearing aids.",
           },
           {
-            title: "Cluttered navigation",
-            text: "Important controls were hard to spot, especially when menus were dense or labels were unclear.",
+            title: "Messy navigation",
+            text: "Some controls were buried in menus, which made simple changes feel like way more work than they should be.",
           },
           {
-            title: "Support gap",
-            text: "When problems happened, users were often pushed toward email support instead of getting help inside the app.",
+            title: "Help felt too far away",
+            text: "When something broke, the app did not always guide users step by step. It often pushed the problem somewhere else.",
           },
           {
-            title: "Older adult needs",
-            text: "Small text, tiny buttons, and technical language made the app harder for seniors and less tech-comfortable users.",
+            title: "Older users needed more clarity",
+            text: "Small text, technical words, and crowded screens made the app harder for users who were less comfortable with technology.",
           },
         ],
       },
       {
         id: "early-concepts",
         eyebrow: "Early Concepts",
-        title: "At first, we treated the problem like a feature gap.",
+        title: "At first, I thought more controls would make the app better.",
         body: [
-          "Our early direction leaned toward adding more controls, more customization, and more ways to adjust sound. That seemed helpful at first, but it also risked making the app harder to scan and harder to trust.",
+          "My early ideas were mostly about adding things: more settings, more sound controls, more ways to customize. That made sense at first, but it also started making the app feel heavier.",
+          "This was one of the first points where I realized that adding more is not always the answer. If the user cannot find the thing they need quickly, then the extra feature does not really help.",
         ],
         splitImages: [
           {
@@ -71,44 +73,45 @@ const projectData = {
       {
         id: "iteration",
         eyebrow: "Design Evolution",
-        title: "The design improved when we stopped treating every user the same.",
+        title: "The design got better when we stopped treating every user the same.",
         body: [
-          "The biggest revision was moving away from one interface for everyone. A first-time user and a technically confident user needed different levels of control, so we separated quick daily adjustments from deeper settings.",
+          "The biggest change was realizing that not every user wants the same level of control. Some people just want volume, battery, and a quick fix button. Other people want deeper settings and more control over the sound.",
+          "So instead of forcing everyone into one busy interface, we split the experience into Simple Mode and Tech Mode. That made the app feel less overwhelming without removing advanced options completely.",
         ],
         comparison: {
           beforeTitle: "Before",
           beforeText:
-            "One general interface with too many settings competing for attention.",
+            "One general interface where too many settings were fighting for attention at the same time.",
           beforeImage: "/J-Portfolio/lumen5.png",
           afterTitle: "After",
           afterText:
-            "A dual-mode structure: Simple Mode for quick changes and Tech Mode for deeper control.",
+            "A two-mode setup: Simple Mode for quick everyday use, and Tech Mode for users who want more control.",
           afterImage: "/J-Portfolio/lumen6.png",
           reason:
-            "We made this change because more functionality did not automatically mean more usability. The interface needed to match different levels of comfort instead of forcing every user through the same flow.",
+            "We changed this because a hearing aid app should match the user’s comfort level. A simple user should not have to sort through advanced settings, and a more technical user should not feel limited.",
         },
       },
       {
         id: "design-decisions",
         eyebrow: "Design Rationale",
-        title: "Each revision was tied back to a specific user problem.",
+        title: "Each main feature had to answer a real user problem.",
         body: [
-          "Rather than presenting features as standalone ideas, we framed each major design choice around a user need we found in research.",
+          "I tried to make sure the features were not just there because they sounded cool. Each one had to connect back to something users might actually struggle with, like adjusting sound quickly, fixing connection problems, or choosing the right setting for a place they are in.",
         ],
         featureImages: [
           {
             title: "Simple Mode",
-            text: "Created for users who need quick changes, larger touch targets, and plain language controls.",
+            text: "Simple Mode was for users who just need the basics without digging through a bunch of settings. Bigger controls, clearer labels, and fewer choices made it easier to use quickly.",
             src: "/J-Portfolio/lumen7.png",
           },
           {
             title: "Guided Troubleshooting",
-            text: "Added because users often did not know where a connection issue was coming from.",
+            text: "The troubleshooting flow was added because connection problems can be confusing. Instead of making users guess what went wrong, the app walks them through what to check first.",
             src: "/J-Portfolio/lumen8.png",
           },
           {
             title: "Environment Optimizer",
-            text: "Added because users think in situations like restaurants, TV, and phone calls — not audio engineering terms.",
+            text: "The Environment Optimizer was based on how people actually talk about sound. Most users think in places like TV, restaurants, outside, or phone calls, not technical audio terms.",
             src: "/J-Portfolio/lumen9.png",
           },
         ],
@@ -116,9 +119,10 @@ const projectData = {
       {
         id: "solution",
         eyebrow: "Final Solution",
-        title: "Lumen helps users adjust, recover, and keep moving.",
+        title: "Lumen became a calmer way to adjust, recover, and keep going.",
         body: [
-          "The final direction centered on daily use: quick sound adjustments, clearer connection status, environment-based settings, and guided troubleshooting.",
+          "The final version focused on the moments that matter most during everyday use: checking connection, changing volume, picking a setting for the environment, and getting help when something stops working.",
+          "The goal was not to make the app feel packed with features. It was to make the important actions easier to find and less scary to use.",
         ],
         galleryImages: [
           {
@@ -138,11 +142,11 @@ const projectData = {
       {
         id: "reflection",
         eyebrow: "Reflection",
-        title: "This project changed how I think about accessibility.",
+        title: "This project taught me that accessibility is more than making things bigger.",
         body: [
-          "This was my first project working with a design team on a problem where the user needs felt specific and higher-stakes. At first, I thought a better app meant giving users more features. Research showed me that more features only help if people can find them, understand them, and trust them.",
-          "The biggest lesson was that accessibility is not only about making text bigger or buttons easier to tap. It also shows up in wording, menu structure, error recovery, and how much confidence a user has when something does not work.",
-          "Looking back, Lumen shows where I started: focused on screens, flows, and feature ideas. It gave me a foundation for later work, where I became more careful about explaining why a design decision should change.",
+          "Before Lumen, I mostly thought about accessibility as bigger buttons, cleaner spacing, and readable text. Those things still matter, but this project showed me that accessibility also comes from clear wording, fewer steps, and helping users recover when something goes wrong.",
+          "I also learned that a feature is only useful if the user understands it at the right time. A hidden setting or confusing label can make a good idea feel useless.",
+          "Looking back, Lumen was where I started learning how to connect a screen to a user problem. I was still figuring it out, but it helped me move past just making screens and start thinking more about why each choice should exist.",
         ],
       },
     ],
@@ -371,9 +375,11 @@ export default async function ProjectPage({
         {"image" in project && (
           <div
             className={
-              project.title === "JIT Website Audit"
-                ? "mt-8 h-[390px] overflow-hidden border border-slate-700 bg-slate-800 px-2"
-                : "mt-8 h-[390px] overflow-hidden border border-slate-700 bg-slate-800"
+              project.title === "Lumen — Hearing Aid App"
+                ? "mx-auto mt-8 h-[390px] w-full max-w-3xl overflow-hidden border border-slate-700 bg-slate-800 px-2"
+                : project.title === "JIT Website Audit"
+                  ? "mt-8 h-[390px] overflow-hidden border border-slate-700 bg-slate-800 px-2"
+                  : "mt-8 h-[390px] overflow-hidden border border-slate-700 bg-slate-800"
             }
           >
             <Image
@@ -462,9 +468,11 @@ export default async function ProjectPage({
           {"imageLabel" in section && section.imageLabel && (
             <div
               className={
-                "imageSrc" in section && section.imageSrc === "/J-Portfolio/jit2.png"
-                  ? "mt-10 h-[340px] overflow-hidden border border-slate-700 bg-slate-800 px-2"
-                  : "mt-10 h-[340px] overflow-hidden border border-slate-700 bg-slate-800"
+                "imageSrc" in section && section.imageSrc === "/J-Portfolio/lumen2.png"
+                  ? "mx-auto mt-10 h-[340px] w-full max-w-3xl overflow-hidden border border-slate-700 bg-slate-800 px-2"
+                  : "imageSrc" in section && section.imageSrc === "/J-Portfolio/jit2.png"
+                    ? "mt-10 h-[340px] overflow-hidden border border-slate-700 bg-slate-800 px-2"
+                    : "mt-10 h-[340px] overflow-hidden border border-slate-700 bg-slate-800"
               }
             >
               {"imageSrc" in section && section.imageSrc ? (
@@ -664,11 +672,13 @@ export default async function ProjectPage({
                   <div
                     key={label}
                     className={
-                      index === 0 && src === "/J-Portfolio/jit10.png"
-                        ? "h-[420px] overflow-hidden border border-slate-700 bg-slate-800 px-2 md:col-span-2"
-                        : index === 0
-                          ? "h-[420px] overflow-hidden border border-slate-700 bg-slate-800 md:col-span-2"
-                          : "h-[320px] overflow-hidden border border-slate-700 bg-slate-800"
+                      index === 0 && src === "/J-Portfolio/lumen11.png"
+                        ? "mx-auto h-[420px] w-full max-w-3xl overflow-hidden border border-slate-700 bg-slate-800 px-2 md:col-span-2"
+                        : index === 0 && src === "/J-Portfolio/jit10.png"
+                          ? "h-[420px] overflow-hidden border border-slate-700 bg-slate-800 px-2 md:col-span-2"
+                          : index === 0
+                            ? "h-[420px] overflow-hidden border border-slate-700 bg-slate-800 md:col-span-2"
+                            : "h-[320px] overflow-hidden border border-slate-700 bg-slate-800"
                     }
                   >
                     {src ? (
