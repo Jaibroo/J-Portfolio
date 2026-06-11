@@ -9,7 +9,7 @@ const featuredProjects = [
     description:
       "A UX redesign focused on accessibility, clearer controls, and faster hearing aid adjustments.",
     slug: "hearing-aid-app",
-    image: "/J-Portfolio/hearing-aid.png",
+    image: "/J-Portfolio/Lumen1.png",
   },
   {
     title: "JIT Website Audit",
