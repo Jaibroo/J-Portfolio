@@ -69,8 +69,8 @@ export default function Home() {
             I design accessible, human-centered digital experiences with a
             growing focus on front-end development and product thinking. This
             summer, I plan to continue sharpening my design process through
-            Design Co&apos;s Summer Upgrade Program while building stronger case
-            studies, cleaner interfaces, and more intentional user flows.
+            Design Co&apos;s Up-Grade Program by working on real-world product
+            challenges guided by industry professionals.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -97,15 +97,15 @@ export default function Home() {
         id="projects"
         className="fade-in flex min-h-[80vh] flex-col justify-start border-b border-slate-700 pt-10 pb-16"
       >
-        <div className="max-w-7xl">
+        <div className="w-full max-w-none">
           <h2 className="text-5xl font-bold text-slate-50">Projects</h2>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
+          <div className="mt-8 grid w-full gap-5 md:grid-cols-2">
             {featuredProjects.map((project) => (
               <Link
                 key={project.slug}
                 href={`/projects/${project.slug}/`}
-                className="group relative h-[500px] overflow-hidden border border-slate-600 bg-slate-900 shadow-xl transition hover:border-sky-400"
+                className="group relative h-[520px] overflow-hidden border border-slate-600 bg-slate-900 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-sky-300"
               >
                 <img
                   src={project.image}
@@ -113,22 +113,22 @@ export default function Home() {
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
 
-                <div className="absolute bottom-0 left-0 p-8">
+                <div className="absolute inset-x-0 bottom-0 p-8 transition duration-300 group-hover:translate-y-[-18px]">
                   <h3 className="text-3xl font-bold text-slate-50">
                     {project.title}
                   </h3>
-                </div>
 
-                <div className="absolute inset-0 flex flex-col justify-end bg-slate-950/80 p-8 opacity-0 transition duration-300 group-hover:opacity-100">
-                  <p className="max-w-xl text-lg leading-7 text-slate-200">
-                    {project.description}
-                  </p>
+                  <div className="mt-4 max-h-0 overflow-hidden transition-all duration-300 group-hover:max-h-40">
+                    <p className="max-w-xl text-lg leading-7 text-slate-200">
+                      {project.description}
+                    </p>
 
-                  <p className="mt-6 text-xl font-medium text-sky-300">
-                    View Project ↗
-                  </p>
+                    <span className="mt-5 inline-flex items-center gap-2 bg-sky-300 px-5 py-3 font-medium text-slate-950">
+                      View Project <span>↗</span>
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}
