@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const featuredProjects = [
   {
@@ -21,6 +21,8 @@ const featuredProjects = [
 ];
 
 export default function Home() {
+  const [copied, setCopied] = useState(false);
+
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-in");
 
@@ -35,12 +37,17 @@ export default function Home() {
 
   const copyEmail = () => {
     navigator.clipboard.writeText("Jairomartinez565@gmail.com");
+    setCopied(true);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
   };
 
   return (
-    <main className="min-h-screen px-10 py-16">
+    <main className="min-h-screen px-10 py-16 font-[Calluna,Georgia,serif]">
       {/* NAV */}
-      <nav className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border-b border-slate-700 bg-slate-950/90 px-10 py-5 backdrop-blur">
+      <nav className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border-b border-slate-700 bg-slate-950/90 px-10 py-5 backdrop-blur font-[Calluna,Georgia,serif]">
         <Link href="/" className="text-xl font-bold text-slate-50">
           Jairo Martinez Arenal
         </Link>
@@ -143,11 +150,9 @@ export default function Home() {
       {/* FOOTER */}
       <footer
         id="footer"
-        className="flex flex-col justify-between gap-6 py-10 text-lg text-slate-400 md:flex-row md:items-center"
+        className="relative flex flex-col justify-between gap-4 py-5 text-base text-slate-400 md:flex-row md:items-center"
       >
-        <p className="uppercase tracking-widest">
-          Designed + coded by Jairo Martinez Arenal
-        </p>
+        <p className="uppercase tracking-widest">Created by yours truly.</p>
 
         <div className="flex flex-wrap gap-8 uppercase tracking-widest">
           <a
@@ -173,6 +178,12 @@ export default function Home() {
             GitHub
           </a>
         </div>
+
+        {copied && (
+          <div className="absolute right-0 -top-8 border border-sky-400 bg-slate-950 px-4 py-2 text-sm uppercase tracking-widest text-sky-300 shadow-xl">
+            Email copied!
+          </div>
+        )}
       </footer>
     </main>
   );
